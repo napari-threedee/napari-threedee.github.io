@@ -12,21 +12,21 @@
         <meta name="author" content="Alister Burt and Kevin Yamauchi">
       
       
-        <link rel="canonical" href="https://github.com/napari-threedee/napari-threedee/">
+        <link rel="canonical" href="https://github.com/napari-threedee/napari-threedee/dev_guides/manipulators/">
       
-      <link rel="icon" href="assets/images/favicon.png">
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.10">
     
     
       
-        <title>napari-threedee</title>
+        <title>Manipulators - napari-threedee</title>
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.472b142f.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.472b142f.min.css">
       
         
-        <link rel="stylesheet" href="assets/stylesheets/palette.08040f6c.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.08040f6c.min.css">
         
       
       
@@ -43,11 +43,11 @@
       
     
     
-      <link rel="stylesheet" href="assets/_mkdocstrings.css">
+      <link rel="stylesheet" href="../../assets/_mkdocstrings.css">
     
-      <link rel="stylesheet" href="stylesheets/extra.css">
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
     
-    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
   
@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#overview" class="md-skip">
+        <a href="#manipulators" class="md-skip">
           Skip to content
         </a>
       
@@ -92,7 +92,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="." title="napari-threedee" class="md-header__button md-logo" aria-label="napari-threedee" data-md-component="logo">
+    <a href="../.." title="napari-threedee" class="md-header__button md-logo" aria-label="napari-threedee" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19.07 4.93C17.22 3 14.66 1.96 12 2c-2.66-.04-5.21 1-7.06 2.93C3 6.78 1.96 9.34 2 12c-.04 2.66 1 5.21 2.93 7.06C6.78 21 9.34 22.04 12 22c2.66.04 5.21-1 7.06-2.93C21 17.22 22.04 14.66 22 12c.04-2.66-1-5.22-2.93-7.07M17 12v6h-3.5v-5h-3v5H7v-6H5l7-7 7.5 7H17Z"/></svg>
@@ -111,7 +111,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Overview
+              Manipulators
             
           </span>
         </div>
@@ -216,7 +216,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="." title="napari-threedee" class="md-nav__button md-logo" aria-label="napari-threedee" data-md-component="logo">
+    <a href="../.." title="napari-threedee" class="md-nav__button md-logo" aria-label="napari-threedee" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19.07 4.93C17.22 3 14.66 1.96 12 2c-2.66-.04-5.21 1-7.06 2.93C3 6.78 1.96 9.34 2 12c-.04 2.66 1 5.21 2.93 7.06C6.78 21 9.34 22.04 12 22c2.66.04 5.21-1 7.06-2.93C21 17.22 22.04 14.66 22 12c.04-2.66-1-5.22-2.93-7.07M17 12v6h-3.5v-5h-3v5H7v-6H5l7-7 7.5 7H17Z"/></svg>
@@ -245,21 +245,11 @@
 
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="." class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
         Overview
       </a>
-      
     </li>
   
 
@@ -270,12 +260,14 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
       
       
       
@@ -298,7 +290,7 @@
   
   
     <li class="md-nav__item">
-      <a href="dev_guides/core_concepts/" class="md-nav__link">
+      <a href="../core_concepts/" class="md-nav__link">
         Core concepts
       </a>
     </li>
@@ -310,11 +302,113 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="dev_guides/manipulators/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Manipulators
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Manipulators
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#coordinate-system" class="md-nav__link">
+    Coordinate system
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#translators" class="md-nav__link">
+    Translators
+  </a>
+  
+    <nav class="md-nav" aria-label="Translators">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#translator-drag-callback" class="md-nav__link">
+    Translator drag callback
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#implementing-translators" class="md-nav__link">
+    Implementing translators
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rotators" class="md-nav__link">
+    Rotators
+  </a>
+  
+    <nav class="md-nav" aria-label="Rotators">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rotator-drag-callback" class="md-nav__link">
+    Rotator drag callback
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#implementing-rotators" class="md-nav__link">
+    Implementing rotators
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#notes-on-performance" class="md-nav__link">
+    Notes on performance
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -360,7 +454,7 @@
   
   
     <li class="md-nav__item">
-      <a href="API/napari_utilities/" class="md-nav__link">
+      <a href="../../API/napari_utilities/" class="md-nav__link">
         napari utilities
       </a>
     </li>
@@ -374,7 +468,7 @@
   
   
     <li class="md-nav__item">
-      <a href="API/selection_utilities/" class="md-nav__link">
+      <a href="../../API/selection_utilities/" class="md-nav__link">
         Selection utilities
       </a>
     </li>
@@ -388,7 +482,7 @@
   
   
     <li class="md-nav__item">
-      <a href="API/geometry_utilities/" class="md-nav__link">
+      <a href="../../API/geometry_utilities/" class="md-nav__link">
         Geometry utilities
       </a>
     </li>
@@ -422,6 +516,82 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#coordinate-system" class="md-nav__link">
+    Coordinate system
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#translators" class="md-nav__link">
+    Translators
+  </a>
+  
+    <nav class="md-nav" aria-label="Translators">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#translator-drag-callback" class="md-nav__link">
+    Translator drag callback
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#implementing-translators" class="md-nav__link">
+    Implementing translators
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rotators" class="md-nav__link">
+    Rotators
+  </a>
+  
+    <nav class="md-nav" aria-label="Rotators">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rotator-drag-callback" class="md-nav__link">
+    Rotator drag callback
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#implementing-rotators" class="md-nav__link">
+    Implementing rotators
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#notes-on-performance" class="md-nav__link">
+    Notes on performance
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -434,14 +604,73 @@
                 
                   
 
-  <a href="https://github.com/napari-threedee/napari-threedee/edit/master/docs/index.md" title="Edit this page" class="md-content__button md-icon">
+  <a href="https://github.com/napari-threedee/napari-threedee/edit/master/docs/dev_guides/manipulators.md" title="Edit this page" class="md-content__button md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
   </a>
 
 
-<h1 id="overview">Overview</h1>
-<p>napari-threedee is a collection of tools for 3D interactivity in napari.</p>
+<h1 id="manipulators">Manipulators</h1>
+<p>Manipulators are UI elements attached to napari layers to aid with positioning and orienting layer data elements 
+being displayed on the canvas. Manipulators can translate and rotate along/around specified axes.</p>
+<h2 id="coordinate-system">Coordinate system</h2>
+<p>The manipulator coordinate system is defined with an affine transformation relative to the layer data coordinate system.
+The manipulator transformation is defined as a translation and a 3x3 transformation matrix (rotation and scale). The 
+translation is stored in the <code>manipulator.translation</code> property and the transformation is stored in the <code>manipulator.
+rot_mat</code> property. The rotation is applied before the translation. </p>
+<h2 id="translators">Translators</h2>
+<p>Translators are the UI element on the manipulator responsible for translating the manipulator. When the user 
+clicks on a translator and drags it, the manipulator is translated by the drag vector component parallel to the 
+translator direction. </p>
+<p>Translators are defined by unit vectors pointing in the direction of translation. The unit vectors are stored in the 
+<code>_initial_translator_normals</code> property as an (n x 3) numpy array for n translators. One translator will be created 
+for each unit vector in <code>initial_translator_normals</code>.</p>
+<h3 id="translator-drag-callback">Translator drag callback</h3>
+<p>When a translator is dragged, the following callbacks are executed:</p>
+<ol>
+<li><code>_pre_drag()</code>: This is called when the translator or rotator is clicked. This is typically used to set up for the 
+   drag callback.</li>
+<li><code>_while_dragging_translator()</code>: This is called during the drag and is typically used to update layer or manipulator 
+   attributes in response to the translator drag. </li>
+<li><code>_post_drag()</code>: This is called after the drag has finished. This is generally used to clean up any 
+   variables that were set during the drag or pre drag callbacks.</li>
+</ol>
+<h3 id="implementing-translators">Implementing translators</h3>
+<p>To add translators to a manipulator, the following must be implemented:</p>
+<ul>
+<li><code>_initial_translator_normals</code> must be defined in the <code>__init__()</code> method.</li>
+<li><code>_pre_drag()</code> callback may be implemented.</li>
+<li><code>_while_dragging_translator()</code> must be implemented.</li>
+<li><code>_post_drag()</code> may be implemented.</li>
+</ul>
+<h2 id="rotators">Rotators</h2>
+<p>Rotators are the UI element on the manipulator responsible for rotating the manipulator. When the user 
+clicks on a rotator and drags it, the manipulator is rotated around the normal vector of the rotator.</p>
+<p>Rotators are defined by unit vectors normal to the rotators. The unit vectors are stored in the 
+<code>_initial_rotators_normals</code> property as an (n x 3) numpy array for n translators. One rotator will be created 
+for each unit vector in <code>initial_rotator_normals</code>.</p>
+<h3 id="rotator-drag-callback">Rotator drag callback</h3>
+<p>When a rotator is dragged, the following callbacks are executed:</p>
+<ol>
+<li><code>_pre_drag()</code>:This is called after the translator or rotator is clicked. This is typically used to set up for the 
+   drag callback.</li>
+<li><code>_while_dragging_rotator()</code>: This is called during the drag and is typically used to update layer or manipulator 
+   attributes in response to the rotator drag. </li>
+<li><code>_post_drag()</code>: This is called called after the drag has finished. This is generally used to clean up any 
+   variables that were set during the drag or pre drag callbacks.</li>
+</ol>
+<h3 id="implementing-rotators">Implementing rotators</h3>
+<p>To add rotators to a manipulator, the following must be implemented:</p>
+<ul>
+<li><code>_initial_rotator_normals</code> must be defined in the <code>__init__()</code> method.</li>
+<li><code>_pre_drag()</code> callback may be implemented.</li>
+<li><code>_while_dragging_rotator()</code> must be implemented.</li>
+<li><code>_post_drag()</code> may be implemented.</li>
+</ul>
+<h2 id="notes-on-performance">Notes on performance</h2>
+<p>In general, writing data to the GPU is slow compared to drawing the scene. Thus, it is recommended that for best 
+performance, one should move the manipulator in the scene by modifying the transformation rather than modifying the 
+manipulator definitions (i.e., <code>_initial_translator_normals</code> and <code>_rotator_translator_normals</code>)</p>
 
 
   
@@ -509,15 +738,30 @@
     
     <nav class="md-footer__inner md-grid" aria-label="Footer" >
       
+        
+        <a href="../core_concepts/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Core concepts" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Core concepts
+            </div>
+          </div>
+        </a>
+      
       
         
-        <a href="dev_guides/core_concepts/" class="md-footer__link md-footer__link--next" aria-label="Next: Core concepts" rel="next">
+        <a href="../../API/napari_utilities/" class="md-footer__link md-footer__link--next" aria-label="Next: napari utilities" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Core concepts
+              napari utilities
             </div>
           </div>
           <div class="md-footer__button md-icon">
@@ -552,10 +796,10 @@
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": ".", "features": ["navigation.instant", "search.highlight", "search.suggest", "content.tabs.link"], "search": "assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "search.highlight", "search.suggest", "content.tabs.link"], "search": "../../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
     
     
-      <script src="assets/javascripts/bundle.d6c3db9e.min.js"></script>
+      <script src="../../assets/javascripts/bundle.d6c3db9e.min.js"></script>
       
     
   </body>
