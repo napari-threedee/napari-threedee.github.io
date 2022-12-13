@@ -61,7 +61,17 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://github.com/napari-threedee/napari-threedee/how_to/how_to_render_plane_manipulator/</loc>
+         <loc>https://github.com/napari-threedee/napari-threedee/how_to/layer_manipulator/</loc>
+         <lastmod>2022-12-13</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://github.com/napari-threedee/napari-threedee/how_to/point_manipulator/</loc>
+         <lastmod>2022-12-13</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://github.com/napari-threedee/napari-threedee/how_to/render_plane_manipulator/</loc>
          <lastmod>2022-12-13</lastmod>
          <changefreq>daily</changefreq>
     </url>

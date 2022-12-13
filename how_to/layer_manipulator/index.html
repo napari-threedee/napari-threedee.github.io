@@ -12,14 +12,14 @@
         <meta name="author" content="Alister Burt and Kevin Yamauchi">
       
       
-        <link rel="canonical" href="https://github.com/napari-threedee/napari-threedee/dev_guides/core_concepts/">
+        <link rel="canonical" href="https://github.com/napari-threedee/napari-threedee/how_to/layer_manipulator/">
       
       <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.10">
     
     
       
-        <title>Core concepts - napari-threedee</title>
+        <title>interactively position layers - napari-threedee</title>
       
     
     
@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#core-concepts" class="md-skip">
+        <a href="#how-to-position-layers-with-the-layer-manipulator" class="md-skip">
           Skip to content
         </a>
       
@@ -111,7 +111,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Core concepts
+              interactively position layers
             
           </span>
         </div>
@@ -324,14 +324,16 @@
 
   
   
+    
+  
   
     
       
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
       
       
       
@@ -354,7 +356,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../how_to/render_plane_manipulator/" class="md-nav__link">
+      <a href="../render_plane_manipulator/" class="md-nav__link">
         interactively position a render plane
       </a>
     </li>
@@ -368,7 +370,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../how_to/point_manipulator/" class="md-nav__link">
+      <a href="../point_manipulator/" class="md-nav__link">
         interactively position points
       </a>
     </li>
@@ -380,11 +382,59 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../../how_to/layer_manipulator/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          interactively position layers
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         interactively position layers
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    Summary
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#instructions" class="md-nav__link">
+    Instructions
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -402,16 +452,14 @@
 
   
   
-    
-  
   
     
       
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
       
       
       
@@ -432,86 +480,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Core concepts
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../dev_guides/core_concepts/" class="md-nav__link">
         Core concepts
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#how-to-use-napari-threedee" class="md-nav__link">
-    How to use napari-threedee
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#threedee-objects" class="md-nav__link">
-    threedee objects
-  </a>
-  
-    <nav class="md-nav" aria-label="threedee objects">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#manipulators" class="md-nav__link">
-    Manipulators
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#annotators" class="md-nav__link">
-    Annotators
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#automatic-widget-generation" class="md-nav__link">
-    Automatic widget generation
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -523,7 +496,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../manipulators/" class="md-nav__link">
+      <a href="../../dev_guides/manipulators/" class="md-nav__link">
         Manipulators
       </a>
     </li>
@@ -706,43 +679,16 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#how-to-use-napari-threedee" class="md-nav__link">
-    How to use napari-threedee
+  <a href="#summary" class="md-nav__link">
+    Summary
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#threedee-objects" class="md-nav__link">
-    threedee objects
+  <a href="#instructions" class="md-nav__link">
+    Instructions
   </a>
-  
-    <nav class="md-nav" aria-label="threedee objects">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#manipulators" class="md-nav__link">
-    Manipulators
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#annotators" class="md-nav__link">
-    Annotators
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#automatic-widget-generation" class="md-nav__link">
-    Automatic widget generation
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -760,48 +706,37 @@
                 
                   
 
-  <a href="https://github.com/napari-threedee/napari-threedee/edit/master/docs/dev_guides/core_concepts.md" title="Edit this page" class="md-content__button md-icon">
+  <a href="https://github.com/napari-threedee/napari-threedee/edit/master/docs/how_to/layer_manipulator.md" title="Edit this page" class="md-content__button md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
   </a>
 
 
-<h1 id="core-concepts">Core concepts</h1>
-<p><code>napari-threedee</code> provides reusable components (called <strong><code>threedee</code> objects</strong>) which 
-- enable custom 3D interactive functionality
-- simplify the development of workflows with 3D interactivity</p>
-<h2 id="how-to-use-napari-threedee">How to use <code>napari-threedee</code></h2>
-<p><code>napari-threedee</code> is designed to be used both as a <strong>napari plugin</strong> and as a <strong>library</strong>.</p>
-<p>When used as a <strong>plugin</strong>, a set of widgets provide custom 3D manipulation and 
-annotation tools in napari. In this case, users need not delve into the code.</p>
-<p>For those who want to integrate custom 3D interactivity into their application, 
-<code>napari-threedee</code> can also be used as a <strong>library</strong>. In this case, users can
-- integrate existing functionality into their applications
-- develop new custom functionality more easily</p>
-<h2 id="threedee-objects"><code>threedee</code> objects</h2>
-<p><strong><code>threedee</code> objects</strong> can be split into two categories, <strong>manipulators</strong> and <strong>annotators</strong>.
-They can be activated and deactivated as required.</p>
-<h3 id="manipulators">Manipulators</h3>
-<p>A <strong>Manipulator</strong> is an object in the scene which allows us to position something. 
-It is a combination of <strong>translators</strong> and <strong>rotators</strong>. </p>
-<p>Clicking and dragging a <strong>translator</strong> will move the manipulator in the direction of the translator.
-Clicking and dragging a <strong>rotator</strong> will rotate the object.</p>
-<div style="text-align: center;"><img src="https://user-images.githubusercontent.com/7307488/173041374-aec20210-65a7-40a2-bb3d-59f542545b8a.png" alt="A napari-threedee manipulator"  width="30%"></div>
-
-<p>Manipulators can be used to modify other objects by providing callbacks which will 
-be run before, during and after an interaction with the manipulator. </p>
-<p>For more details see <a href="../manipulators/"><strong>manipulators</strong></a></p>
-<h3 id="annotators">Annotators</h3>
-<p>An <strong>Annotator</strong> allows for a custom 3D data annotation mode in napari. 
-This is particularly useful for orchestrating annotation behaviour which depends 
-on the state of multiple layers (e.g. adding points on planes).</p>
-<h3 id="automatic-widget-generation">Automatic widget generation</h3>
-<p>A dock widget can be generated automatically for any <code>threedee</code> object by subclassing
-<code>QtThreeDeeWidgetBase</code> and providing the new <code>threedee</code> object as a model.</p>
-<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">QtRenderPlaneManipulatorWidget</span><span class="p">(</span><span class="n">QtThreeDeeWidgetBase</span><span class="p">):</span>
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">viewer</span><span class="p">:</span> <span class="n">napari</span><span class="o">.</span><span class="n">Viewer</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
-        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">model</span><span class="o">=</span><span class="n">RenderPlaneManipulator</span><span class="p">,</span> <span class="n">viewer</span><span class="o">=</span><span class="n">viewer</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-</code></pre></div>
+<h1 id="how-to-position-layers-with-the-layer-manipulator">How to position layers with the layer manipulator</h1>
+<h2 id="summary">Summary</h2>
+<p>Sometimes objects in your data have a systematic shift relative to one another. If you need to position an entire dataset, you can use the layer manipulator. This article describes how to interactively position a layer using the layer manipulator.</p>
+<p><div class="video-container"><video style="position: relative; width: 100%; height: 22.172vw" controls autoplay ><source src="https://user-images.githubusercontent.com/1120672/207429703-d595a3cc-f569-40f5-8cb8-e3fc019d983b.mov" type="video/mp4" /></video></div></p>
+<h2 id="instructions">Instructions</h2>
+<ol>
+<li>
+<p>Open the layer_manipulator.py example from the docs. The viewer is initalized in 3D rendering mode. You can click and drag in the canvas to rotate the view. Note that the two layers are the same image, but not aligned.</p>
+<p><img alt="layers loaded" src="https://user-images.githubusercontent.com/1120672/207427782-c2b04738-17ed-4963-b6b9-cde6a899ae7f.png" /></p>
+</li>
+<li>
+<p>Select the "image_1" layer in the layer manipulator plugin. We will move layer "image_1" (the green one) to be aligned with layer "image_0".</p>
+<p><img alt="select layer" src="https://user-images.githubusercontent.com/1120672/207428382-3683481f-4acc-4f6a-a108-c497893cf82e.png" /></p>
+</li>
+<li>
+<p>Activate the layer manipulator plugin.</p>
+<p><img alt="activate the plugin" src="https://user-images.githubusercontent.com/1120672/207428741-3d07f55f-0cc9-4b1b-92eb-6d67d7beac94.png" /></p>
+<p>When the plugin is activated, you will see the manipulator at (0, 0, 0) on image_1.</p>
+<p><img alt="plugin activated" src="https://user-images.githubusercontent.com/1120672/207428982-2637f2f4-7f2d-48ff-8c96-374cb6b8d7db.png" /></p>
+</li>
+<li>
+<p>Click and drag the manipulator to align the rows. Since the layers are being rendered with additive blending, the image turns white where the layers are overlapping.</p>
+<p><div class="video-container"><video style="position: relative; width: 100%; height: 22.172vw" controls autoplay ><source src="https://user-images.githubusercontent.com/1120672/207429298-53af135e-0c5a-4517-bbb1-f97e2ccaadf7.mov" type="video/mp4" /></video></div></p>
+</li>
+</ol>
 
 
   
@@ -870,7 +805,7 @@ on the state of multiple layers (e.g. adding points on planes).</p>
     <nav class="md-footer__inner md-grid" aria-label="Footer" >
       
         
-        <a href="../../how_to/layer_manipulator/" class="md-footer__link md-footer__link--prev" aria-label="Previous: interactively position layers" rel="prev">
+        <a href="../point_manipulator/" class="md-footer__link md-footer__link--prev" aria-label="Previous: interactively position points" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
           </div>
@@ -879,20 +814,20 @@ on the state of multiple layers (e.g. adding points on planes).</p>
               <span class="md-footer__direction">
                 Previous
               </span>
-              interactively position layers
+              interactively position points
             </div>
           </div>
         </a>
       
       
         
-        <a href="../manipulators/" class="md-footer__link md-footer__link--next" aria-label="Next: Manipulators" rel="next">
+        <a href="../../dev_guides/core_concepts/" class="md-footer__link md-footer__link--next" aria-label="Next: Core concepts" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Manipulators
+              Core concepts
             </div>
           </div>
           <div class="md-footer__button md-icon">
