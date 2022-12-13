@@ -12,14 +12,14 @@
         <meta name="author" content="Alister Burt and Kevin Yamauchi">
       
       
-        <link rel="canonical" href="https://github.com/napari-threedee/napari-threedee/annotations/specifications/">
+        <link rel="canonical" href="https://github.com/napari-threedee/napari-threedee/annotations/sphere_spec/">
       
       <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.10">
     
     
       
-        <title>Overview - napari-threedee</title>
+        <title>Sphere Specification - napari-threedee</title>
       
     
     
@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#overview" class="md-skip">
+        <a href="#sphere-specification" class="md-skip">
           Skip to content
         </a>
       
@@ -111,7 +111,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Overview
+              Sphere Specification
             
           </span>
         </div>
@@ -438,16 +438,14 @@
 
   
   
-    
-  
   
     
       
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
       
       
       
@@ -468,52 +466,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Overview
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../specifications/" class="md-nav__link">
         Overview
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#specifications" class="md-nav__link">
-    Specifications
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -644,8 +601,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#specifications" class="md-nav__link">
-    Specifications
+  <a href="#layer-specification" class="md-nav__link">
+    Layer Specification
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#zarr-array-specification" class="md-nav__link">
+    Zarr Array Specification
   </a>
   
 </li>
@@ -664,23 +628,40 @@
                 
                   
 
-  <a href="https://github.com/napari-threedee/napari-threedee/edit/master/docs/annotations/specifications.md" title="Edit this page" class="md-content__button md-icon">
+  <a href="https://github.com/napari-threedee/napari-threedee/edit/master/docs/annotations/sphere_spec.md" title="Edit this page" class="md-content__button md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
   </a>
 
 
-<h1 id="overview">Overview</h1>
-<p>Annotations made using the annotators from <em>napari-threedee</em> are stored 
-on a single layer. This layer will match a <strong>specification</strong> for a given
-annotation type.</p>
-<p>Per-point attributes will be stored in the layer features table. Other 
-metadata will be stored in the layer metadata as a dictionary under the 
-<code>"n3d_metadata"</code> key.</p>
-<h2 id="specifications">Specifications</h2>
+<h1 id="sphere-specification">Sphere Specification</h1>
+<h2 id="layer-specification">Layer Specification</h2>
+<p>Sphere annotations are stored on a napari 
+<a href="https://napari.org/stable/howtos/layers/points.html"><code>Points</code> layer</a> and 
+can contain multiple splines.</p>
 <ul>
-<li><a href="../spline_spec/">spline specification</a> (points layer)</li>
-<li><a href="../sphere_spec/">sphere specification</a> (points layer)</li>
+<li><code>Points.data</code> is an <code>(n, d)</code> array of n d-dimensional points.</li>
+<li><code>Points.features</code> is a table which will contain column called <ul>
+<li><code>sphere_id</code>, an integer id for each sphere.</li>
+<li><code>radius</code>, a radius for each sphere.</li>
+</ul>
+</li>
+</ul>
+<h2 id="zarr-array-specification">Zarr Array Specification</h2>
+<p>The following assumes an <code>n3d</code> file has been read into a variable called 
+<code>n3d</code> using the <em>zarr</em> library</p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">zarr</span>
+
+<span class="n">zarr</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="s1">&#39;sphere.n3d&#39;</span><span class="p">)</span>
+</code></pre></div>
+<ul>
+<li><code>n3d</code> is an <code>(n, d)</code> <a href="https://zarr.readthedocs.
+  io/en/stable/api/core.html"><code>zarr.core.Array</code></a> containing the center of each sphere</li>
+<li><code>n3d.attrs["annotation_type"]</code> is <code>"sphere"</code></li>
+<li><code>n3d.attrs["sphere_id"]</code> is an <code>(n, )</code> array containing a unique id for 
+  each sphere</li>
+<li><code>n3d.attrs["radius"]</code> is an <code>(n, )</code> array containing the radius for each 
+  sphere</li>
 </ul>
 
 
@@ -745,42 +726,6 @@ metadata will be stored in the layer metadata as a dictionary under the
       </main>
       
         <footer class="md-footer">
-  
-    
-    <nav class="md-footer__inner md-grid" aria-label="Footer" >
-      
-        
-        <a href="../../dev_guides/manipulators/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Manipulators" rel="prev">
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
-          </div>
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Previous
-              </span>
-              Manipulators
-            </div>
-          </div>
-        </a>
-      
-      
-        
-        <a href="../io/" class="md-footer__link md-footer__link--next" aria-label="Next: Input/Output" rel="next">
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Next
-              </span>
-              Input/Output
-            </div>
-          </div>
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
-          </div>
-        </a>
-      
-    </nav>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">

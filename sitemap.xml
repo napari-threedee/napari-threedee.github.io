@@ -31,6 +31,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://github.com/napari-threedee/napari-threedee/annotations/sphere_spec/</loc>
+         <lastmod>2022-12-13</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://github.com/napari-threedee/napari-threedee/annotations/spline_spec/</loc>
          <lastmod>2022-12-13</lastmod>
          <changefreq>daily</changefreq>
