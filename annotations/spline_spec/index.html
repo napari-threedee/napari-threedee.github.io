@@ -661,10 +661,9 @@ can contain multiple splines.</p>
 <li><code>Points.data</code> is an <code>(n, d)</code> array of n d-dimensional points.</li>
 <li><code>Points.features</code> is a table which will contain a column called 
   <code>spline_id</code>, an integer id for each point.</li>
-<li><code>Points.metadata</code> is a dictionary with the following key:value pairs<ul>
-<li><code>"spline_order": int</code> the order of the splines.</li>
-</ul>
-</li>
+<li><code>Points.metadata["n3d_metadata"]</code> is a dictionary with the following 
+  key/value pairs</li>
+<li><code>annotation_type</code>: <code>spline</code></li>
 </ul>
 <h2 id="zarr-array-specification">Zarr Array Specification</h2>
 <p>The following assumes an <code>n3d</code> file has been read into a variable called 
@@ -679,7 +678,6 @@ can contain multiple splines.</p>
 <li><code>n3d.attrs["annotation_type"]</code> is <code>"spline"</code></li>
 <li><code>n3d.attrs["spline_id"]</code> is an <code>(n, )</code> array containing the spline id of 
   each point</li>
-<li><code>n3d.attrs["spline_order"]</code> is the order of the splines as an integer</li>
 </ul>
 
 
