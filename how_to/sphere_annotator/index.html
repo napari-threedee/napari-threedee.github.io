@@ -12,20 +12,20 @@
         <meta name="author" content="Alister Burt and Kevin Yamauchi">
       
       
-        <link rel="canonical" href="https://github.com/napari-threedee/napari-threedee/how_to/point_manipulator/">
+        <link rel="canonical" href="https://github.com/napari-threedee/napari-threedee/how_to/sphere_annotator/">
       
       
-        <link rel="prev" href="../render_plane_manipulator/">
+        <link rel="prev" href="../point_annotator/">
       
       
-        <link rel="next" href="../layer_manipulator/">
+        <link rel="next" href="../spline_annotator/">
       
       <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.3">
     
     
       
-        <title>interactively position points - napari-threedee</title>
+        <title>annotate spheres in 3D - napari-threedee</title>
       
     
     
@@ -83,7 +83,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#how-to-position-points-with-the-point-manipulator" class="md-skip">
+        <a href="#annotate-spheres-on-arbitrary-planes" class="md-skip">
           Skip to content
         </a>
       
@@ -118,7 +118,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              interactively position points
+              annotate spheres in 3D
             
           </span>
         </div>
@@ -369,59 +369,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          interactively position points
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../point_manipulator/" class="md-nav__link">
         interactively position points
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#summary" class="md-nav__link">
-    Summary
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#instructions" class="md-nav__link">
-    Instructions
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -459,11 +411,59 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../sphere_annotator/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          annotate spheres in 3D
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         annotate spheres in 3D
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    Summary
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#instructions" class="md-nav__link">
+    Instructions
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -792,36 +792,37 @@
   
 
 
-<div><h1 id="how-to-position-points-with-the-point-manipulator">How to position points with the point manipulator</h1>
+<div><h1 id="annotate-spheres-on-arbitrary-planes">Annotate spheres on arbitrary planes</h1>
 <h2 id="summary">Summary</h2>
-<p>Precisely positioning a point in 3D is a useful way to annotate specific positions or choose the location of an object in a scene. This article explains how to use the <code>napari-threedee</code> point manipulator plugin to position points in 3D.</p>
-<p><div class="video-container"><video style="position:relative;width:100%;height:22.172vw" loop controls autoplay alt="type:video"><source src="https://user-images.githubusercontent.com/1120672/207435568-f4a2afd9-28e9-481c-97aa-6f8994382834.mov" type="video/mp4"></source></video></div></p>
+<p>Annotating spheres in 3D is useful for defining regions of interest around a point. Here we describe how to annotate a sphere on an arbitrary plane in an image.</p>
+<p><div class="video-container"><video style="position:relative;width:100%;height:22.172vw" loop controls autoplay alt="type:video"><source src="https://user-images.githubusercontent.com/1120672/225970403-f75e90dc-614d-409d-b1b7-f7453dededc1.mov" type="video/mp4"></source></video></div></p>
 <h2 id="instructions">Instructions</h2>
 <ol>
 <li>
-<p>Open the <a href="https://github.com/napari-threedee/napari-threedee/blob/main/examples/plugin/points_manipulator.py">points_manipulator.py</a> example.</p>
-<p><img alt="example opened" src="https://user-images.githubusercontent.com/1120672/207381513-8fd3f7e9-157f-4ef9-99c1-551bd329842b.png">
-   The example opens in 3D rendering mode. Click and drag to rotate the view.</p>
+<p>Open the <code>sphere_annotator.py</code> example from the examples folder. The viewer is initialized in 3D rendering mode in plane rendering mode. We are viewing a 3D volume with one plane being actively rendered.</p>
+<p><img alt="example opened" src="https://user-images.githubusercontent.com/1120672/225966223-fb426704-efb3-4ead-a7a5-8d0731f890ff.png"></p>
 </li>
 <li>
-<p>Open the point manipulator plugin from the Plugins menu: Plugins -&gt; napari-threedee -&gt; point manipulator. Click the "activate" to start the plugin.</p>
-<p><img alt="plugin opened" src="https://user-images.githubusercontent.com/1120672/207382282-dad2bd6f-68cf-47d6-89ed-be326d320f93.png"></p>
+<p>Activate the plugin. Select the <code>plane</code> layer for the "image layer" and click the "activate" button. This will add points to the <code>Points</code> layer based on the intersection of the click ray with the currently rendered <code>orange</code> layer.</p>
+<p><img alt="select layer" src="https://user-images.githubusercontent.com/1120672/225966635-337d550d-6880-424a-8b3b-d0f1de07b42f.png"></p>
 </li>
 <li>
-<p>Set the Points later to "Selection" mode by clicking the "Selection" button in the layer controls</p>
-<p><img alt="point selection mode" src="https://user-images.githubusercontent.com/1120672/207382556-9cd2111a-1a01-4102-9de8-4bb87ddad3c3.png"></p>
+<p>You can translate the rendered orange play along its normal vector by holding the shift key while clicking  with the left mouse button and dragging the plane.</p>
+<p><div class="video-container"><video style="position:relative;width:100%;height:22.172vw" loop controls autoplay alt="type:video"><source src="https://user-images.githubusercontent.com/1120672/225967164-978493a3-ee48-4768-8359-029b6b18bb3f.mov" type="video/mp4"></source></video></div></p>
 </li>
 <li>
-<p>Select a point by clicking on it. The point manipulator will appear on the selected point.</p>
-<p><img alt="point manipulator" src="https://user-images.githubusercontent.com/1120672/207383241-d86cdee0-8f5f-4e0d-bb96-bebb993e3904.png"></p>
+<p>You can add a sphere on the rendered play by holding alt and clicking on the plane with the left mouse button. If you alt+click again, it will reposition the sphere.</p>
 </li>
-<li>
-<p>You can now move the point around by clicking and dragging the manipulator.</p>
-<p><img alt="type:movie" src="https://user-images.githubusercontent.com/1120672/207384092-1b4231fa-beba-46e4-b1c7-b32aa1ae32a6.mov"></p>
-<p>If you want to rotate the view while a point manipulator is active, press and hold the space bar while clicking and dragging in the canvas to rotate the view. The manipulator will be rendered invisible while you rotate so you can see the whole scene.</p>
-<p><img alt="type:movie" src="https://user-images.githubusercontent.com/1120672/207384729-fea3e148-a61a-43c0-bc78-eeb8f973e36b.mov"></p>
-</li>
-</ol></div>
+</ol>
+<p><div class="video-container"><video style="position:relative;width:100%;height:22.172vw" loop controls autoplay alt="type:video"><source src="https://user-images.githubusercontent.com/1120672/225969195-c892ed99-0d97-45bf-b701-4ec07df90050.mov" type="video/mp4"></source></video></div></p>
+<ol>
+<li>You can adjust the radius of the sphere by presing the <code>r</code> key and the sphere will snap to the position where your mouse pointer intersects the rendered plane.</li>
+</ol>
+<p><div class="video-container"><video style="position:relative;width:100%;height:22.172vw" loop controls autoplay alt="type:video"><source src="https://user-images.githubusercontent.com/1120672/225968729-ba5c2d6b-d2a3-4012-9c71-dc8ef9abb4a3.mov" type="video/mp4"></source></video></div></p>
+<ol>
+<li>You add a new point by pressing the <code>n</code> key and repeating steps 5 and 6.</li>
+</ol>
+<p><div class="video-container"><video style="position:relative;width:100%;height:22.172vw" loop controls autoplay alt="type:video"><source src="https://user-images.githubusercontent.com/1120672/225969966-c6ba56d0-4f27-4ad2-977d-b07e26b302f5.mov" type="video/mp4"></source></video></div></p></div>
 
 
   

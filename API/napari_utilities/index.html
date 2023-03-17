@@ -387,6 +387,48 @@
 
             
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../how_to/point_annotator/" class="md-nav__link">
+        annotate points in 3D
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../how_to/sphere_annotator/" class="md-nav__link">
+        annotate spheres in 3D
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../how_to/spline_annotator/" class="md-nav__link">
+        annotate splines in 3D
+      </a>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -507,6 +549,48 @@
     <li class="md-nav__item">
       <a href="../../annotations/io/" class="md-nav__link">
         Input/Output
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../annotations/point_spec/" class="md-nav__link">
+        Point Specification
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../annotations/sphere_spec/" class="md-nav__link">
+        Sphere Specification
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../annotations/spline_spec/" class="md-nav__link">
+        Spline Specification
       </a>
     </li>
   
@@ -681,7 +765,7 @@
   
 
 
-<h1 id="napari-utilities">napari utilities</h1>
+<div><h1 id="napari-utilities">napari utilities</h1>
 
 
 <div class="doc doc-object doc-module">
@@ -790,7 +874,7 @@
 <span class="normal">38</span>
 <span class="normal">39</span>
 <span class="normal">40</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">get_napari_visual</span><span class="p">(</span><span class="n">viewer</span><span class="p">,</span> <span class="n">layer</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;Get the visual class for a given layer</span>
+<span class="w">    </span><span class="sd">"""Get the visual class for a given layer</span>
 
 <span class="sd">    Parameters</span>
 <span class="sd">    ----------</span>
@@ -803,7 +887,7 @@
 <span class="sd">    -------</span>
 <span class="sd">    visual</span>
 <span class="sd">        The napari visual class for the layer.</span>
-<span class="sd">    &quot;&quot;&quot;</span>
+<span class="sd">    """</span>
     <span class="n">visual</span> <span class="o">=</span> <span class="n">viewer</span><span class="o">.</span><span class="n">window</span><span class="o">.</span><span class="n">_qt_window</span><span class="o">.</span><span class="n">_qt_viewer</span><span class="o">.</span><span class="n">layer_to_visual</span><span class="p">[</span><span class="n">layer</span><span class="p">]</span>
 
     <span class="k">return</span> <span class="n">visual</span>
@@ -888,7 +972,7 @@
 <span class="normal">95</span>
 <span class="normal">96</span>
 <span class="normal">97</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">get_mouse_position_in_displayed_dimensions</span><span class="p">(</span><span class="n">event</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">:</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;Get the position under the mouse in scene (displayed world) coordinates.</span>
+<span class="w">    </span><span class="sd">"""Get the position under the mouse in scene (displayed world) coordinates.</span>
 
 <span class="sd">    Parameters</span>
 <span class="sd">    ----------</span>
@@ -899,7 +983,7 @@
 <span class="sd">    -------</span>
 <span class="sd">    click_dir_data_3d : np.ndarray</span>
 <span class="sd">        The click direction in displayed data coordiantes</span>
-<span class="sd">    &quot;&quot;&quot;</span>
+<span class="sd">    """</span>
     <span class="n">click_position_world</span> <span class="o">=</span> <span class="n">event</span><span class="o">.</span><span class="n">position</span>
     <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">click_position_world</span><span class="p">)[</span><span class="nb">list</span><span class="p">(</span><span class="n">event</span><span class="o">.</span><span class="n">dims_displayed</span><span class="p">)]</span>
 </code></pre></div></td></tr></table></div>
@@ -953,13 +1037,13 @@
 <span class="normal">107</span>
 <span class="normal">108</span>
 <span class="normal">109</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">get_view_direction_in_displayed_dimensions</span><span class="p">(</span><span class="n">event</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">:</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;Get the view direction under the mouse in scene (displayed world) coordinates.</span>
+<span class="w">    </span><span class="sd">"""Get the view direction under the mouse in scene (displayed world) coordinates.</span>
 
 <span class="sd">    Parameters</span>
 <span class="sd">    ----------</span>
 <span class="sd">    event: Event</span>
 <span class="sd">        napari mouse event.</span>
-<span class="sd">    &quot;&quot;&quot;</span>
+<span class="sd">    """</span>
     <span class="n">view_direction_world</span> <span class="o">=</span> <span class="n">event</span><span class="o">.</span><span class="n">view_direction</span>
     <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">view_direction_world</span><span class="p">)[</span><span class="nb">list</span><span class="p">(</span><span class="n">event</span><span class="o">.</span><span class="n">dims_displayed</span><span class="p">)]</span>
 </code></pre></div></td></tr></table></div>
@@ -1086,7 +1170,7 @@
 <span class="normal">141</span>
 <span class="normal">142</span>
 <span class="normal">143</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">get_mouse_position_in_displayed_layer_data_coordinates</span><span class="p">(</span><span class="n">layer</span><span class="p">,</span> <span class="n">event</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Tuple</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">]:</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;Get the mouse click position and direction in layer data displayed coordinates.</span>
+<span class="w">    </span><span class="sd">"""Get the mouse click position and direction in layer data displayed coordinates.</span>
 
 <span class="sd">    Parameters</span>
 <span class="sd">    ----------</span>
@@ -1101,7 +1185,7 @@
 <span class="sd">        The click position in displayed data coordinates.</span>
 <span class="sd">    click_dir_data_3d : np.ndarray</span>
 <span class="sd">        The click direction in displayed data coordiantes</span>
-<span class="sd">    &quot;&quot;&quot;</span>
+<span class="sd">    """</span>
     <span class="n">click_position_world</span> <span class="o">=</span> <span class="n">event</span><span class="o">.</span><span class="n">position</span>
     <span class="n">click_position_data_3d</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span>
         <span class="n">layer</span><span class="o">.</span><span class="n">_world_to_displayed_data</span><span class="p">(</span>
@@ -1129,7 +1213,7 @@
 
   </div>
 
-</div>
+</div></div>
 
 
   

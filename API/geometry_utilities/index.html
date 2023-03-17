@@ -387,6 +387,48 @@
 
             
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../how_to/point_annotator/" class="md-nav__link">
+        annotate points in 3D
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../how_to/sphere_annotator/" class="md-nav__link">
+        annotate spheres in 3D
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../how_to/spline_annotator/" class="md-nav__link">
+        annotate splines in 3D
+      </a>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -507,6 +549,48 @@
     <li class="md-nav__item">
       <a href="../../annotations/io/" class="md-nav__link">
         Input/Output
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../annotations/point_spec/" class="md-nav__link">
+        Point Specification
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../annotations/sphere_spec/" class="md-nav__link">
+        Sphere Specification
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../annotations/spline_spec/" class="md-nav__link">
+        Spline Specification
       </a>
     </li>
   
@@ -667,7 +751,7 @@
   
 
 
-<h1 id="geometry-utilities">Geometry utilities</h1>
+<div><h1 id="geometry-utilities">Geometry utilities</h1>
 
 
 <div class="doc doc-object doc-module">
@@ -811,7 +895,7 @@ Must be orthogonal to vector_0 and vector_1.</p>
 <span class="normal">29</span>
 <span class="normal">30</span>
 <span class="normal">31</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">signed_angle_between_vectors</span><span class="p">(</span><span class="n">vector_0</span><span class="p">,</span> <span class="n">vector_1</span><span class="p">,</span> <span class="n">rotation_axis</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot; Returns the angle in radians between vectors &#39;v1&#39; and &#39;v2&#39;.</span>
+<span class="w">    </span><span class="sd">""" Returns the angle in radians between vectors 'v1' and 'v2'.</span>
 
 <span class="sd">    Parameters</span>
 <span class="sd">    ----------</span>
@@ -827,7 +911,7 @@ Must be orthogonal to vector_0 and vector_1.</p>
 <span class="sd">    -------</span>
 <span class="sd">    angle : float</span>
 <span class="sd">        The signed angle of rotation in radians.</span>
-<span class="sd">    &quot;&quot;&quot;</span>
+<span class="sd">    """</span>
     <span class="n">unit_vector_0</span> <span class="o">=</span> <span class="n">vector_0</span> <span class="o">/</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">vector_0</span><span class="p">)</span>
     <span class="n">unit_vector_1</span> <span class="o">=</span> <span class="n">vector_1</span> <span class="o">/</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">vector_1</span><span class="p">)</span>
 
@@ -948,7 +1032,7 @@ Must be orthogonal to vector_0 and vector_1.</p>
 <span class="normal">69</span>
 <span class="normal">70</span>
 <span class="normal">71</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">rotation_matrix_around_vector_3d</span><span class="p">(</span><span class="n">angle</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">vector</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">:</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;Create the rotation matrix for a specified angle of rotation around a vector.</span>
+<span class="w">    </span><span class="sd">"""Create the rotation matrix for a specified angle of rotation around a vector.</span>
 
 <span class="sd">    Parameters</span>
 <span class="sd">    ----------</span>
@@ -962,7 +1046,7 @@ Must be orthogonal to vector_0 and vector_1.</p>
 <span class="sd">    -------</span>
 <span class="sd">    rotation_matrix : np.ndarray</span>
 <span class="sd">        (3, 3) rotation matrix for the specified rotation.</span>
-<span class="sd">    &quot;&quot;&quot;</span>
+<span class="sd">    """</span>
     <span class="n">vector_u</span> <span class="o">=</span> <span class="n">vector</span> <span class="o">/</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">vector</span><span class="p">)</span>
     <span class="n">u_0</span> <span class="o">=</span> <span class="n">vector_u</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
     <span class="n">u_1</span> <span class="o">=</span> <span class="n">vector_u</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
@@ -997,7 +1081,7 @@ Must be orthogonal to vector_0 and vector_1.</p>
 
   </div>
 
-</div>
+</div></div>
 
 
   

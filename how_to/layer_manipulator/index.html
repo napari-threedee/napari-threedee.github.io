@@ -18,7 +18,7 @@
         <link rel="prev" href="../point_manipulator/">
       
       
-        <link rel="next" href="../../dev_guides/core_concepts/">
+        <link rel="next" href="../point_annotator/">
       
       <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.3">
@@ -441,6 +441,48 @@
 
             
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../point_annotator/" class="md-nav__link">
+        annotate points in 3D
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sphere_annotator/" class="md-nav__link">
+        annotate spheres in 3D
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../spline_annotator/" class="md-nav__link">
+        annotate splines in 3D
+      </a>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -561,6 +603,48 @@
     <li class="md-nav__item">
       <a href="../../annotations/io/" class="md-nav__link">
         Input/Output
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../annotations/point_spec/" class="md-nav__link">
+        Point Specification
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../annotations/sphere_spec/" class="md-nav__link">
+        Sphere Specification
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../annotations/spline_spec/" class="md-nav__link">
+        Spline Specification
       </a>
     </li>
   
@@ -708,31 +792,31 @@
   
 
 
-<h1 id="how-to-position-layers-with-the-layer-manipulator">How to position layers with the layer manipulator</h1>
+<div><h1 id="how-to-position-layers-with-the-layer-manipulator">How to position layers with the layer manipulator</h1>
 <h2 id="summary">Summary</h2>
 <p>Sometimes objects in your data have a systematic shift relative to one another. If you need to position an entire dataset, you can use the layer manipulator. This article describes how to interactively position a layer using the layer manipulator.</p>
-<p><div class="video-container"><video style="position: relative; width: 100%; height: 22.172vw" loop controls autoplay><source src="https://user-images.githubusercontent.com/1120672/207429703-d595a3cc-f569-40f5-8cb8-e3fc019d983b.mov" type="video/mp4" /></video></div></p>
+<p><div class="video-container"><video style="position:relative;width:100%;height:22.172vw" loop controls autoplay alt="type:video"><source src="https://user-images.githubusercontent.com/1120672/207429703-d595a3cc-f569-40f5-8cb8-e3fc019d983b.mov" type="video/mp4"></source></video></div></p>
 <h2 id="instructions">Instructions</h2>
 <ol>
 <li>
 <p>Open the layer_manipulator.py example from the docs. The viewer is initalized in 3D rendering mode. You can click and drag in the canvas to rotate the view. Note that the two layers are the same image, but not aligned.</p>
-<p><img alt="layers loaded" src="https://user-images.githubusercontent.com/1120672/207427782-c2b04738-17ed-4963-b6b9-cde6a899ae7f.png" /></p>
+<p><img alt="layers loaded" src="https://user-images.githubusercontent.com/1120672/207427782-c2b04738-17ed-4963-b6b9-cde6a899ae7f.png"></p>
 </li>
 <li>
 <p>Select the "image_1" layer in the layer manipulator plugin. We will move layer "image_1" (the green one) to be aligned with layer "image_0".</p>
-<p><img alt="select layer" src="https://user-images.githubusercontent.com/1120672/207428382-3683481f-4acc-4f6a-a108-c497893cf82e.png" /></p>
+<p><img alt="select layer" src="https://user-images.githubusercontent.com/1120672/207428382-3683481f-4acc-4f6a-a108-c497893cf82e.png"></p>
 </li>
 <li>
 <p>Activate the layer manipulator plugin.</p>
-<p><img alt="activate the plugin" src="https://user-images.githubusercontent.com/1120672/207428741-3d07f55f-0cc9-4b1b-92eb-6d67d7beac94.png" /></p>
+<p><img alt="activate the plugin" src="https://user-images.githubusercontent.com/1120672/207428741-3d07f55f-0cc9-4b1b-92eb-6d67d7beac94.png"></p>
 <p>When the plugin is activated, you will see the manipulator at (0, 0, 0) on image_1.</p>
-<p><img alt="plugin activated" src="https://user-images.githubusercontent.com/1120672/207428982-2637f2f4-7f2d-48ff-8c96-374cb6b8d7db.png" /></p>
+<p><img alt="plugin activated" src="https://user-images.githubusercontent.com/1120672/207428982-2637f2f4-7f2d-48ff-8c96-374cb6b8d7db.png"></p>
 </li>
 <li>
 <p>Click and drag the manipulator to align the rows. Since the layers are being rendered with additive blending, the image turns white where the layers are overlapping.</p>
-<p><div class="video-container"><video style="position: relative; width: 100%; height: 22.172vw" loop controls autoplay><source src="https://user-images.githubusercontent.com/1120672/207429298-53af135e-0c5a-4517-bbb1-f97e2ccaadf7.mov" type="video/mp4" /></video></div></p>
+<p><div class="video-container"><video style="position:relative;width:100%;height:22.172vw" loop controls autoplay alt="type:video"><source src="https://user-images.githubusercontent.com/1120672/207429298-53af135e-0c5a-4517-bbb1-f97e2ccaadf7.mov" type="video/mp4"></source></video></div></p>
 </li>
-</ol>
+</ol></div>
 
 
   

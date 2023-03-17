@@ -18,6 +18,8 @@
         <link rel="prev" href="../specifications/">
       
       
+        <link rel="next" href="../point_spec/">
+      
       <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.3">
     
@@ -389,6 +391,48 @@
 
             
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../how_to/point_annotator/" class="md-nav__link">
+        annotate points in 3D
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../how_to/sphere_annotator/" class="md-nav__link">
+        annotate spheres in 3D
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../how_to/spline_annotator/" class="md-nav__link">
+        annotate splines in 3D
+      </a>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -572,6 +616,48 @@
 
             
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../point_spec/" class="md-nav__link">
+        Point Specification
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sphere_spec/" class="md-nav__link">
+        Sphere Specification
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../spline_spec/" class="md-nav__link">
+        Spline Specification
+      </a>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -720,7 +806,7 @@
   
 
 
-<h1 id="inputoutput">Input/Output</h1>
+<div><h1 id="inputoutput">Input/Output</h1>
 <p>Annotation layers can be serialized to disk as <code>n3d</code> files. <code>n3d</code> files are
 <a href="https://zarr.readthedocs.io/en/stable/index.html"><code>zarr</code> files</a>.</p>
 <h2 id="napari-threedee"><em>napari-threedee</em></h2>
@@ -731,19 +817,19 @@
 library.</p>
 <div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">zarr</span>
 
-<span class="n">n3d_data</span> <span class="o">=</span> <span class="n">zarr</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="s1">&#39;annotation.n3d&#39;</span><span class="p">)</span>
+<span class="n">n3d_data</span> <span class="o">=</span> <span class="n">zarr</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="s1">'annotation.n3d'</span><span class="p">)</span>
 </code></pre></div>
 <p>These objects contain some attributes allowing them to be 
 correctly interpreted by <em>napari-threedee</em>. The 
 attribute <code>annotation_type</code> maps to a specific reader function 
 <em>napari-threedee</em> will use to load the data.</p>
-<p><div class="highlight"><pre><span></span><code><span class="n">n3d_data</span><span class="o">.</span><span class="n">attrs</span><span class="p">[</span><span class="s2">&quot;annotation_type&quot;</span><span class="p">]</span>
+<p></p><div class="highlight"><pre><span></span><code><span class="n">n3d_data</span><span class="o">.</span><span class="n">attrs</span><span class="p">[</span><span class="s2">"annotation_type"</span><span class="p">]</span>
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="n">Out</span><span class="p">[</span><span class="mi">2</span><span class="p">]:</span> <span class="s1">&#39;spline&#39;</span>
-</code></pre></div></p>
+<div class="highlight"><pre><span></span><code><span class="n">Out</span><span class="p">[</span><span class="mi">2</span><span class="p">]:</span> <span class="s1">'spline'</span>
+</code></pre></div>
 <h2 id="other-programming-languages">Other programming languages</h2>
 <p>For working with <code>n3d</code> (<code>zarr</code>) files in other languages, please look at the 
-<a href="https://github.com/zarr-developers/zarr_implementations">zarr implementations repository</a>.</p>
+<a href="https://github.com/zarr-developers/zarr_implementations">zarr implementations repository</a>.</p></div>
 
 
   

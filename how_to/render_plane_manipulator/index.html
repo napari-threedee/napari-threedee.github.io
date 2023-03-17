@@ -441,6 +441,48 @@
 
             
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../point_annotator/" class="md-nav__link">
+        annotate points in 3D
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sphere_annotator/" class="md-nav__link">
+        annotate spheres in 3D
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../spline_annotator/" class="md-nav__link">
+        annotate splines in 3D
+      </a>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -561,6 +603,48 @@
     <li class="md-nav__item">
       <a href="../../annotations/io/" class="md-nav__link">
         Input/Output
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../annotations/point_spec/" class="md-nav__link">
+        Point Specification
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../annotations/sphere_spec/" class="md-nav__link">
+        Sphere Specification
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../annotations/spline_spec/" class="md-nav__link">
+        Spline Specification
       </a>
     </li>
   
@@ -708,14 +792,14 @@
   
 
 
-<h1 id="how-to-use-the-render-plane-manipulator">How to use the render plane manipulator</h1>
+<div><h1 id="how-to-use-the-render-plane-manipulator">How to use the render plane manipulator</h1>
 <h2 id="summary">Summary</h2>
 <p>The render plane manipulator allows you to interactively position the plane being visualized in the <code>napari</code> <code>Image</code> 
 layer plane depiction mode. The plane depiction mode is a 3D rendering mode where only the specified plane is 
 rendered. This is a power rendering mode for visualizing structures within a 3D volume, but defining the precise 
 plane programatically can be challenging. Thus, the render plane manipulator is useful for interactively positioning 
 the rendering plane.</p>
-<p><div class="video-container"><video style="position: relative; width: 100%; height: 22.172vw" loop controls autoplay><source src="https://user-images.githubusercontent.com/1120672/207312303-e81f652a-3fae-476f-abee-e19227b2b6c3.mov" type="video/mp4" /></video></div></p>
+<p><div class="video-container"><video style="position:relative;width:100%;height:22.172vw" loop controls autoplay alt="type:video"><source src="https://user-images.githubusercontent.com/1120672/207312303-e81f652a-3fae-476f-abee-e19227b2b6c3.mov" type="video/mp4"></source></video></div></p>
 <h2 id="instructions">Instructions</h2>
 <ol>
 <li>
@@ -726,35 +810,35 @@ the rendering plane.</p>
 </li>
 <li>
 <p>Load the "HIV virus-like particles tomogram" image from the File menu: File -&gt; Open Sample -&gt; HIV virus-like particle tomogram. Note that this will download the sample image so it make take some time. If you have previously opened the sample image, it should be cached and will not download again.</p>
-<p><img alt="screenshot of the hiv tomogram" src="https://user-images.githubusercontent.com/1120672/207310777-1cfdb146-e5b9-43fb-a740-6af137ed9df5.png" /></p>
+<p><img alt="screenshot of the hiv tomogram" src="https://user-images.githubusercontent.com/1120672/207310777-1cfdb146-e5b9-43fb-a740-6af137ed9df5.png"></p>
 </li>
 <li>
 <p>Click the "Toggle ndisplay" button in the lower left corner of the viewer to enter 3D rendering mode. </p>
-<p><img alt="toggle ndisplay button" src="https://user-images.githubusercontent.com/1120672/207310915-45424cd4-a0c6-44e9-9de1-93483959a131.png" /></p>
+<p><img alt="toggle ndisplay button" src="https://user-images.githubusercontent.com/1120672/207310915-45424cd4-a0c6-44e9-9de1-93483959a131.png"></p>
 <p>Upon clicking the button, you will see the volume in 3D. You you can click and drag to rotate the view. Note that the HIV particles are visible, but low contrast.</p>
-<p><img alt="particles rendered in 3D" src="https://user-images.githubusercontent.com/1120672/207311476-e5e8d2dd-61b1-46f3-8607-e22c3da9afbb.png" /></p>
+<p><img alt="particles rendered in 3D" src="https://user-images.githubusercontent.com/1120672/207311476-e5e8d2dd-61b1-46f3-8607-e22c3da9afbb.png"></p>
 </li>
 <li>
 <p>In the layer controls, change the <code>depiction</code> mode from <code>volume</code> to <code>plane</code>.</p>
-<p><img alt="depiction mode dropdown." src="https://user-images.githubusercontent.com/1120672/207311566-8da18aa4-8b65-40b7-925a-bd679e36ff82.png" /></p>
+<p><img alt="depiction mode dropdown." src="https://user-images.githubusercontent.com/1120672/207311566-8da18aa4-8b65-40b7-925a-bd679e36ff82.png"></p>
 <p>After changing the depiction mode, you will see a single plane being rendered from your 3d volume.</p>
-<p><img alt="plane rendering mode" src="https://user-images.githubusercontent.com/1120672/207311620-0494f9cf-3059-40d4-902e-37f026556c56.png" /></p>
+<p><img alt="plane rendering mode" src="https://user-images.githubusercontent.com/1120672/207311620-0494f9cf-3059-40d4-902e-37f026556c56.png"></p>
 </li>
 <li>
 <p>Open the render plane manipulator plugin from the menu: Plugins -&gt; napari-threedee -&gt; render plane manipulator. You will see the render plane manipulator appear on the rendering plane.</p>
-<p><img alt="render plane manipulator" src="https://user-images.githubusercontent.com/1120672/207311868-d6a0d972-37ea-4e79-92b1-3923a058221b.png" /></p>
+<p><img alt="render plane manipulator" src="https://user-images.githubusercontent.com/1120672/207311868-d6a0d972-37ea-4e79-92b1-3923a058221b.png"></p>
 </li>
 <li>
 <p>You can click and drag the translator on the manipulator to translate the plane along its normal.</p>
-<p><div class="video-container"><video style="position: relative; width: 100%; height: 22.172vw" loop controls autoplay><source src="https://user-images.githubusercontent.com/1120672/207312152-d9d49bfd-04dc-4b27-827b-04282c512e48.mov" type="video/mp4" /></video></div></p>
+<p><div class="video-container"><video style="position:relative;width:100%;height:22.172vw" loop controls autoplay alt="type:video"><source src="https://user-images.githubusercontent.com/1120672/207312152-d9d49bfd-04dc-4b27-827b-04282c512e48.mov" type="video/mp4"></source></video></div></p>
 </li>
 <li>
 <p>You can click and drag the rotator to rotate the plane around the manipulator.</p>
-<p><div class="video-container"><video style="position: relative; width: 100%; height: 22.172vw" loop controls autoplay><source src="https://user-images.githubusercontent.com/1120672/207312303-e81f652a-3fae-476f-abee-e19227b2b6c3.mov" type="video/mp4" /></video></div></p>
+<p><div class="video-container"><video style="position:relative;width:100%;height:22.172vw" loop controls autoplay alt="type:video"><source src="https://user-images.githubusercontent.com/1120672/207312303-e81f652a-3fae-476f-abee-e19227b2b6c3.mov" type="video/mp4"></source></video></div></p>
 <p>If you would like to change the center of rotation, you can press the shift key while clicking on the plane with the left mouse button to move the manipulator.</p>
-<p><div class="video-container"><video style="position: relative; width: 100%; height: 22.172vw" loop controls autoplay><source src="https://user-images.githubusercontent.com/1120672/207312430-74b95837-0718-4b9b-a2dd-b9fed0565e21.mov" type="video/mp4" /></video></div></p>
+<p><div class="video-container"><video style="position:relative;width:100%;height:22.172vw" loop controls autoplay alt="type:video"><source src="https://user-images.githubusercontent.com/1120672/207312430-74b95837-0718-4b9b-a2dd-b9fed0565e21.mov" type="video/mp4"></source></video></div></p>
 </li>
-</ol>
+</ol></div>
 
 
   

@@ -15,7 +15,7 @@
         <link rel="canonical" href="https://github.com/napari-threedee/napari-threedee/dev_guides/core_concepts/">
       
       
-        <link rel="prev" href="../../how_to/layer_manipulator/">
+        <link rel="prev" href="../../how_to/spline_annotator/">
       
       
         <link rel="next" href="../manipulators/">
@@ -391,6 +391,48 @@
 
             
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../how_to/point_annotator/" class="md-nav__link">
+        annotate points in 3D
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../how_to/sphere_annotator/" class="md-nav__link">
+        annotate spheres in 3D
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../how_to/spline_annotator/" class="md-nav__link">
+        annotate splines in 3D
+      </a>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -594,6 +636,48 @@
 
             
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../annotations/point_spec/" class="md-nav__link">
+        Point Specification
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../annotations/sphere_spec/" class="md-nav__link">
+        Sphere Specification
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../annotations/spline_spec/" class="md-nav__link">
+        Spline Specification
+      </a>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -762,7 +846,7 @@
   
 
 
-<h1 id="core-concepts">Core concepts</h1>
+<div><h1 id="core-concepts">Core concepts</h1>
 <p><code>napari-threedee</code> provides reusable components (called <strong><code>threedee</code> objects</strong>) which 
 - enable custom 3D interactive functionality
 - simplify the development of workflows with 3D interactivity</p>
@@ -782,7 +866,7 @@ They can be activated and deactivated as required.</p>
 It is a combination of <strong>translators</strong> and <strong>rotators</strong>. </p>
 <p>Clicking and dragging a <strong>translator</strong> will move the manipulator in the direction of the translator.
 Clicking and dragging a <strong>rotator</strong> will rotate the object.</p>
-<div style="text-align: center;"><img src="https://user-images.githubusercontent.com/7307488/173041374-aec20210-65a7-40a2-bb3d-59f542545b8a.png" alt="A napari-threedee manipulator"  width="30%"></div>
+<div style="text-align: center;"><img src="https://user-images.githubusercontent.com/7307488/173041374-aec20210-65a7-40a2-bb3d-59f542545b8a.png" alt="A napari-threedee manipulator" width="30%"></div>
 
 <p>Manipulators can be used to modify other objects by providing callbacks which will 
 be run before, during and after an interaction with the manipulator. </p>
@@ -797,7 +881,7 @@ on the state of multiple layers (e.g. adding points on planes).</p>
 <div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">QtRenderPlaneManipulatorWidget</span><span class="p">(</span><span class="n">QtThreeDeeWidgetBase</span><span class="p">):</span>
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">viewer</span><span class="p">:</span> <span class="n">napari</span><span class="o">.</span><span class="n">Viewer</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">model</span><span class="o">=</span><span class="n">RenderPlaneManipulator</span><span class="p">,</span> <span class="n">viewer</span><span class="o">=</span><span class="n">viewer</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-</code></pre></div>
+</code></pre></div></div>
 
 
   
