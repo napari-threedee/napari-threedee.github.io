@@ -12,21 +12,21 @@
         <meta name="author" content="Alister Burt and Kevin Yamauchi">
       
       
-        <link rel="canonical" href="https://github.com/napari-threedee/napari-threedee/generated/gallery/mg_execution_times/">
+        <link rel="canonical" href="https://github.com/napari-threedee/napari-threedee/generated/gallery/plugin/surface_annotator_plugin/">
       
-      <link rel="icon" href="../../../assets/images/favicon.png">
+      <link rel="icon" href="../../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.2.4, mkdocs-material-8.2.7">
     
     
       
-        <title>Computation times - napari-threedee</title>
+        <title>Surface annotator example (plugin) - napari-threedee</title>
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.9d5733d3.min.css">
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.9d5733d3.min.css">
       
         
-        <link rel="stylesheet" href="../../../assets/stylesheets/palette.e6a45f82.min.css">
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.e6a45f82.min.css">
         
       
     
@@ -41,19 +41,19 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/_mkdocstrings.css">
+      <link rel="stylesheet" href="../../../../assets/_mkdocstrings.css">
     
-      <link rel="stylesheet" href="../../../stylesheets/extra.css">
+      <link rel="stylesheet" href="../../../../stylesheets/extra.css">
     
-      <link rel="stylesheet" href="../../../sg_gallery.css">
+      <link rel="stylesheet" href="../../../../sg_gallery-rendered-html.css">
     
-      <link rel="stylesheet" href="../../../sg_gallery-dataframe.css">
+      <link rel="stylesheet" href="../../../../sg_gallery-dataframe.css">
     
-      <link rel="stylesheet" href="../../../sg_gallery-binder.css">
+      <link rel="stylesheet" href="../../../../sg_gallery-binder.css">
     
-      <link rel="stylesheet" href="../../../sg_gallery-rendered-html.css">
+      <link rel="stylesheet" href="../../../../sg_gallery.css">
     
-    <script>__md_scope=new URL("../../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
   
@@ -83,7 +83,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#computation-times" class="md-skip">
+        <a href="#surface-annotator-example-plugin" class="md-skip">
           Skip to content
         </a>
       
@@ -97,7 +97,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../../.." title="napari-threedee" class="md-header__button md-logo" aria-label="napari-threedee" data-md-component="logo">
+    <a href="../../../.." title="napari-threedee" class="md-header__button md-logo" aria-label="napari-threedee" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19.07 4.93C17.22 3 14.66 1.96 12 2c-2.66-.04-5.21 1-7.06 2.93C3 6.78 1.96 9.34 2 12c-.04 2.66 1 5.21 2.93 7.06C6.78 21 9.34 22.04 12 22c2.66.04 5.21-1 7.06-2.93C21 17.22 22.04 14.66 22 12c.04-2.66-1-5.22-2.93-7.07M17 12v6h-3.5v-5h-3v5H7v-6H5l7-7 7.5 7H17z"/></svg>
@@ -116,7 +116,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Computation times
+              Surface annotator example (plugin)
             
           </span>
         </div>
@@ -219,7 +219,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../.." title="napari-threedee" class="md-nav__button md-logo" aria-label="napari-threedee" data-md-component="logo">
+    <a href="../../../.." title="napari-threedee" class="md-nav__button md-logo" aria-label="napari-threedee" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19.07 4.93C17.22 3 14.66 1.96 12 2c-2.66-.04-5.21 1-7.06 2.93C3 6.78 1.96 9.34 2 12c-.04 2.66 1 5.21 2.93 7.06C6.78 21 9.34 22.04 12 22c2.66.04 5.21-1 7.06-2.93C21 17.22 22.04 14.66 22 12c.04-2.66-1-5.22-2.93-7.07M17 12v6h-3.5v-5h-3v5H7v-6H5l7-7 7.5 7H17z"/></svg>
@@ -250,7 +250,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../.." class="md-nav__link">
+      <a href="../../../.." class="md-nav__link">
         Overview
       </a>
     </li>
@@ -297,7 +297,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../getting_started/users/" class="md-nav__link">
+      <a href="../../../../getting_started/users/" class="md-nav__link">
         for users
       </a>
     </li>
@@ -311,7 +311,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../getting_started/developers/" class="md-nav__link">
+      <a href="../../../../getting_started/developers/" class="md-nav__link">
         for developers
       </a>
     </li>
@@ -373,7 +373,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../how_to/render_plane_manipulator/" class="md-nav__link">
+      <a href="../../../../how_to/render_plane_manipulator/" class="md-nav__link">
         interactively position a render plane
       </a>
     </li>
@@ -387,7 +387,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../how_to/point_manipulator/" class="md-nav__link">
+      <a href="../../../../how_to/point_manipulator/" class="md-nav__link">
         interactively position points
       </a>
     </li>
@@ -401,7 +401,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../how_to/layer_manipulator/" class="md-nav__link">
+      <a href="../../../../how_to/layer_manipulator/" class="md-nav__link">
         interactively position layers
       </a>
     </li>
@@ -415,7 +415,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../how_to/point_annotator/" class="md-nav__link">
+      <a href="../../../../how_to/point_annotator/" class="md-nav__link">
         annotate points in 3D
       </a>
     </li>
@@ -429,7 +429,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../how_to/sphere_annotator/" class="md-nav__link">
+      <a href="../../../../how_to/sphere_annotator/" class="md-nav__link">
         annotate spheres in 3D
       </a>
     </li>
@@ -443,7 +443,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../how_to/spline_annotator/" class="md-nav__link">
+      <a href="../../../../how_to/spline_annotator/" class="md-nav__link">
         annotate splines in 3D
       </a>
     </li>
@@ -497,7 +497,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../dev_guides/core_concepts/" class="md-nav__link">
+      <a href="../../../../dev_guides/core_concepts/" class="md-nav__link">
         Core concepts
       </a>
     </li>
@@ -511,7 +511,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../dev_guides/manipulators/" class="md-nav__link">
+      <a href="../../../../dev_guides/manipulators/" class="md-nav__link">
         Manipulators
       </a>
     </li>
@@ -571,7 +571,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../annotations/specifications/" class="md-nav__link">
+      <a href="../../../../annotations/specifications/" class="md-nav__link">
         Overview
       </a>
     </li>
@@ -585,7 +585,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../annotations/io/" class="md-nav__link">
+      <a href="../../../../annotations/io/" class="md-nav__link">
         Input/Output
       </a>
     </li>
@@ -599,7 +599,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../annotations/point_spec/" class="md-nav__link">
+      <a href="../../../../annotations/point_spec/" class="md-nav__link">
         Point Specification
       </a>
     </li>
@@ -613,7 +613,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../annotations/sphere_spec/" class="md-nav__link">
+      <a href="../../../../annotations/sphere_spec/" class="md-nav__link">
         Sphere Specification
       </a>
     </li>
@@ -627,7 +627,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../annotations/spline_spec/" class="md-nav__link">
+      <a href="../../../../annotations/spline_spec/" class="md-nav__link">
         Spline Specification
       </a>
     </li>
@@ -647,12 +647,14 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" checked>
       
       
       
@@ -672,7 +674,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../">Examples gallery</a>
+          <a href="../../">Examples gallery</a>
           
             <label for="__nav_6">
               <span class="md-nav__icon md-icon"></span>
@@ -694,47 +696,10 @@
   
   
   
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_2" type="checkbox" id="__nav_6_2" >
-      
-      
-      
-        
-          
-        
-      
-      
-        <label class="md-nav__link" for="__nav_6_2">
-          Gallery for napari-threedee
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" aria-label="Gallery for napari-threedee" data-md-level="2">
-        <label class="md-nav__title" for="__nav_6_2">
-          <span class="md-nav__icon md-icon"></span>
-          Gallery for napari-threedee
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
-  
     <li class="md-nav__item">
-      <a href="../empty_surface/" class="md-nav__link">
-        Empty surface
+      <a href="../../../.." class="md-nav__link">
+        Gallery for napari-threedee
       </a>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
     </li>
   
 
@@ -790,8 +755,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../library/layer_manipulator_library/" class="md-nav__link">
-        Layer manipulator example (library)
+      <a href="../../library/layer_manipulator_library/" class="md-nav__link">
+        Layer manipulator (library)
       </a>
     </li>
   
@@ -804,8 +769,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../library/camera_spline_library/" class="md-nav__link">
-        Camera spline example (library)
+      <a href="../../library/camera_spline_library/" class="md-nav__link">
+        Camera spline (library)
       </a>
     </li>
   
@@ -818,8 +783,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../library/sphere_annotator_library/" class="md-nav__link">
-        Sphere annotator example (library)
+      <a href="../../library/render_plane_manipulator_library/" class="md-nav__link">
+        Render plane manipulator (library)
       </a>
     </li>
   
@@ -832,8 +797,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../library/render_plane_manipulator_library/" class="md-nav__link">
-        Render plane manipulator example (library)
+      <a href="../../library/mesh_headlight_library/" class="md-nav__link">
+        Mesh headlight (library)
       </a>
     </li>
   
@@ -846,8 +811,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../library/mesh_headlight_library/" class="md-nav__link">
-        Mesh headlight example (library)
+      <a href="../../library/surface_annotator_library/" class="md-nav__link">
+        Surface annotator (library)
       </a>
     </li>
   
@@ -860,8 +825,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../library/point_annotator_library/" class="md-nav__link">
-        Point annotator example (library)
+      <a href="../../library/point_annotator_library/" class="md-nav__link">
+        Point annotator (library)
       </a>
     </li>
   
@@ -874,8 +839,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../library/spline_annotator_library/" class="md-nav__link">
-        Spline annotator example (library)
+      <a href="../../library/path_annotator_library/" class="md-nav__link">
+        Path point annotator (library)
       </a>
     </li>
   
@@ -888,8 +853,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../library/surface_annotator_library/" class="md-nav__link">
-        Surface annotator example (library)
+      <a href="../../library/sphere_annotator_library/" class="md-nav__link">
+        Sphere annotator (library)
       </a>
     </li>
   
@@ -907,15 +872,23 @@
               
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_4" type="checkbox" id="__nav_6_4" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_4" type="checkbox" id="__nav_6_4" checked>
       
       
       
+        
+          
+        
+          
+        
+          
         
           
         
@@ -951,8 +924,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../plugin/points_manipulator_plugin/" class="md-nav__link">
-        Points manipulator example (plugin)
+      <a href="../points_manipulator_plugin/" class="md-nav__link">
+        Points manipulator (plugin)
       </a>
     </li>
   
@@ -965,8 +938,46 @@
   
   
     <li class="md-nav__item">
-      <a href="../plugin/mesh_headlight_plugin/" class="md-nav__link">
-        Mesh headlight example (plugin)
+      <a href="../mesh_headlight_plugin/" class="md-nav__link">
+        Mesh headlight (plugin)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Surface annotator example (plugin)
+      </a>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../render_plane_manipulator_plugin/" class="md-nav__link">
+        Render plane manipulator (plugin)
       </a>
     </li>
   
@@ -979,8 +990,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../plugin/render_plane_manipulator_plugin/" class="md-nav__link">
-        Render plane manipulator example (plugin)
+      <a href="../layer_manipulator_plugin/" class="md-nav__link">
+        Layer manipulator (plugin)
       </a>
     </li>
   
@@ -993,8 +1004,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../plugin/layer_manipulator_plugin/" class="md-nav__link">
-        Layer manipulator example (plugin)
+      <a href="../camera_spline_plugin/" class="md-nav__link">
+        Camera spline (plugin)
       </a>
     </li>
   
@@ -1007,36 +1018,50 @@
   
   
     <li class="md-nav__item">
-      <a href="../plugin/spline_annotator_plugin/" class="md-nav__link">
-        Spline annotator example (plugin)
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../plugin/camera_spline_plugin/" class="md-nav__link">
-        Camera spline example (plugin)
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../plugin/point_annotator_plugin/" class="md-nav__link">
+      <a href="../point_annotator_plugin/" class="md-nav__link">
         Plane point annotator (plugin)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sphere_annotator_plugin/" class="md-nav__link">
+        Sphere annotator (plugin)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../spline_annotator_plugin/" class="md-nav__link">
+        Spline annotator (plugin)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../path_annotator_plugin/" class="md-nav__link">
+        Path point annotator (plugin)
       </a>
     </li>
   
@@ -1098,7 +1123,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../API/napari_utilities/" class="md-nav__link">
+      <a href="../../../../API/napari_utilities/" class="md-nav__link">
         napari utilities
       </a>
     </li>
@@ -1112,7 +1137,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../API/selection_utilities/" class="md-nav__link">
+      <a href="../../../../API/selection_utilities/" class="md-nav__link">
         Selection utilities
       </a>
     </li>
@@ -1126,7 +1151,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../API/geometry_utilities/" class="md-nav__link">
+      <a href="../../../../API/geometry_utilities/" class="md-nav__link">
         Geometry utilities
       </a>
     </li>
@@ -1170,17 +1195,60 @@
             <article class="md-content__inner md-typeset">
               
                 
-<a href="https://github.com/napari-threedee/napari-threedee/edit/master/docs/generated/gallery/mg_execution_times.md" title="Edit this page" class="md-content__button md-icon">
+<a href="https://github.com/napari-threedee/napari-threedee/edit/master/docs/examples/plugin/surface_annotator_plugin.py" title="Edit this page" class="md-content__button md-icon">
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
 </a>
 
 
 
-<div><h1 id="computation-times">Computation times</h1>
-<p><strong>00:02.229</strong> total execution time for <strong>generated_gallery</strong> files:</p>
-<p>+----------------------------------------------------------------------+-----------+--------+
-| <a href="../empty_surface/">empty_surface</a> (docs/examples/empty_surface.py) | 00:02.229 | 0.0 MB |
-+----------------------------------------------------------------------+-----------+--------+</p></div>
+<div><div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Click <a href="#download_links">here</a>
+to download the full example code</p>
+</div>
+<h1 id="surface-annotator-example-plugin">Surface annotator example (plugin)</h1>
+<p>An example controlling the surface annotator,
+using napari-threedee as a napari plugin.</p>
+<!-- GENERATED FROM PYTHON SOURCE LINES 8-43 -->
+
+<p><img alt="surface annotator plugin" class="mkd-glr-single-img" src="../images/mkd_glr_surface_annotator_plugin_001.png" srcset="../images/mkd_glr_surface_annotator_plugin_001.png"></p>
+<p>```{.python }</p>
+<p>import napari
+from skimage import data</p>
+<h1 id="create-napari-viewer">create napari viewer</h1>
+<p>viewer = napari.Viewer(ndisplay=3)</p>
+<h1 id="generate-image-data">generate image data</h1>
+<p>blobs = data.binary_blobs(length=64, volume_fraction=0.1, n_dim=3).astype(float)</p>
+<h1 id="add-an-image-layers-to-the-viewer">add an image layers to the viewer</h1>
+<p>viewer.add_image(
+    blobs,
+    name='orange plane',
+    rendering='average',
+    colormap='bop orange',
+    blending='translucent',
+    opacity=0.5,
+    depiction='plane',
+    plane={
+    'position': (32, 32, 32),
+    'normal': (1, 0, 0),
+    'thickness': 10,
+})</p>
+<h1 id="add-plugin-dock-widget-to-viewer">add plugin dock widget to viewer</h1>
+<p>viewer.window.add_plugin_dock_widget(
+    plugin_name="napari-threedee", widget_name="surface annotator"
+)</p>
+<h1 id="run-napari">run napari</h1>
+<p>viewer.layers.selection = [viewer.layers[0]]
+viewer.axes.visible = True
+viewer.camera.angles = (-15, 25, -30)
+viewer.camera.zoom *= 0.5
+napari.run()```</p>
+<p><strong>Total running time of the script:</strong> ( 0 minutes  1.292 seconds)</p>
+<div id="download_links"></div>
+
+<p><a class="md-button center" href="../surface_annotator_plugin.py"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 512 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M480 352H346.5l-45.25 45.25C289.2 409.3 273.1 416 256 416s-33.16-6.656-45.25-18.75L165.5 352H32c-17.67 0-32 14.33-32 32v96c0 17.67 14.33 32 32 32h448c17.67 0 32-14.33 32-32v-96c0-17.7-14.3-32-32-32zm-48 104c-13.2 0-24-10.8-24-24s10.8-24 24-24 24 10.8 24 24-10.8 24-24 24zm-198.6-81.4c6.2 6.3 14.4 9.4 22.6 9.4s16.38-3.125 22.62-9.375l128-128c12.49-12.5 12.49-32.75 0-45.25-12.5-12.5-32.76-12.5-45.25 0L288 274.8V32c0-17.67-14.33-32-32-32-17.7 0-32 14.33-32 32v242.8l-73.4-73.4c-12.49-12.5-32.75-12.5-45.25 0-12.49 12.5-12.49 32.75 0 45.25L233.4 374.6z"></path></svg></span> Download Python source code: surface_annotator_plugin.py</a></p>
+<p><a class="md-button center" href="../surface_annotator_plugin.ipynb"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 512 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M480 352H346.5l-45.25 45.25C289.2 409.3 273.1 416 256 416s-33.16-6.656-45.25-18.75L165.5 352H32c-17.67 0-32 14.33-32 32v96c0 17.67 14.33 32 32 32h448c17.67 0 32-14.33 32-32v-96c0-17.7-14.3-32-32-32zm-48 104c-13.2 0-24-10.8-24-24s10.8-24 24-24 24 10.8 24 24-10.8 24-24 24zm-198.6-81.4c6.2 6.3 14.4 9.4 22.6 9.4s16.38-3.125 22.62-9.375l128-128c12.49-12.5 12.49-32.75 0-45.25-12.5-12.5-32.76-12.5-45.25 0L288 274.8V32c0-17.67-14.33-32-32-32-17.7 0-32 14.33-32 32v242.8l-73.4-73.4c-12.49-12.5-32.75-12.5-45.25 0-12.49 12.5-12.49 32.75 0 45.25L233.4 374.6z"></path></svg></span> Download Jupyter notebook: surface_annotator_plugin.ipynb</a></p>
+<p><a class="mkd-glr-signature" href="https://mkdocs-gallery.github.io">Gallery generated by mkdocs-gallery</a></p></div>
 
               
             </article>
@@ -1190,6 +1258,41 @@
       </main>
       
         <footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../mesh_headlight_plugin/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Mesh headlight (plugin)" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Mesh headlight (plugin)
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../render_plane_manipulator_plugin/" class="md-footer__link md-footer__link--next" aria-label="Next: Render plane manipulator (plugin)" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Render plane manipulator (plugin)
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
@@ -1215,10 +1318,10 @@
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.instant", "search.highlight", "search.suggest", "content.tabs.link", "navigation.indexes"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../../assets/javascripts/workers/search.5e67fbfe.min.js"}</script>
+    <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.instant", "search.highlight", "search.suggest", "content.tabs.link", "navigation.indexes"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../../../assets/javascripts/workers/search.5e67fbfe.min.js"}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.e87a5f81.min.js"></script>
+      <script src="../../../../assets/javascripts/bundle.e87a5f81.min.js"></script>
       
     
   </body>
