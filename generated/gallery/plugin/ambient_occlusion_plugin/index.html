@@ -12,20 +12,20 @@
         <meta name="author" content="Alister Burt and Kevin Yamauchi">
       
       
-        <link rel="canonical" href="https://github.com/napari-threedee/napari-threedee/generated/gallery/plugin/sphere_annotator_plugin/">
+        <link rel="canonical" href="https://github.com/napari-threedee/napari-threedee/generated/gallery/plugin/ambient_occlusion_plugin/">
       
       
-        <link rel="prev" href="../point_annotator_plugin/">
+        <link rel="prev" href="../mesh_headlight_plugin/">
       
       
-        <link rel="next" href="../path_annotator_plugin/">
+        <link rel="next" href="../surface_annotator_plugin/">
       
       <link rel="icon" href="../../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.14">
     
     
       
-        <title>Sphere annotator (plugin) - napari-threedee</title>
+        <title>Ambient occlusion (plugin) - napari-threedee</title>
       
     
     
@@ -91,7 +91,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#sphere-annotator-plugin" class="md-skip">
+        <a href="#ambient-occlusion-plugin" class="md-skip">
           Skip to content
         </a>
       
@@ -126,7 +126,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Sphere annotator (plugin)
+              Ambient occlusion (plugin)
             
           </span>
         </div>
@@ -989,11 +989,21 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../ambient_occlusion_plugin/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Ambient occlusion (plugin)
       </a>
+      
     </li>
   
 
@@ -1087,21 +1097,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../sphere_annotator_plugin/" class="md-nav__link">
         Sphere annotator (plugin)
       </a>
-      
     </li>
   
 
@@ -1260,61 +1260,43 @@
 <p>Click <a href="#download_links">here</a>
 to download the full example code</p>
 </div>
-<h1 id="sphere-annotator-plugin">Sphere annotator (plugin)</h1>
-<p>An example controlling the sphere annotator,
+<h1 id="ambient-occlusion-plugin">Ambient occlusion (plugin)</h1>
+<p>An example adding ambient occlusion to a mesh,
 using napari-threedee as a napari plugin.</p>
-<!-- GENERATED FROM PYTHON SOURCE LINES 8-56 -->
+<!-- GENERATED FROM PYTHON SOURCE LINES 8-33 -->
 
-<p><img alt="sphere annotator plugin" class="mkd-glr-single-img" src="../images/mkd_glr_sphere_annotator_plugin_001.png" srcset="../images/mkd_glr_sphere_annotator_plugin_001.png"></p>
-<p>```{.python }
-import napari
-from skimage import data</p>
-<h1 id="create-napari-viewer">create napari viewer</h1>
-<p>viewer = napari.Viewer(ndisplay=3)</p>
-<h1 id="generate-image-data">generate image data</h1>
-<p>blobs = data.binary_blobs(length=64, volume_fraction=0.1, n_dim=3).astype(float)</p>
-<h1 id="add-two-image-layers-to-viewer">add two image layers to viewer</h1>
-<p>viewer.add_image(
-    blobs,
-    name='orange plane',
-    rendering='average',
-    colormap='bop orange',
-    blending='translucent',
-    opacity=0.5,
-    depiction='plane',
-    plane={
-    'position': (32, 32, 32),
-    'normal': (1, 0, 0),
-    'thickness': 10,
-})</p>
-<p>viewer.add_image(
-    blobs,
-    name='blue plane',
-    rendering='average',
-    colormap='bop blue',
-    blending='additive',
-    opacity=0.5,
-    depiction='plane',
-    plane={
-    'position': (32, 32, 32),
-    'normal': (0, 1, 0),
-    'thickness': 10,
-})</p>
-<h1 id="add-plugin-dock-widget-to-viewer">add plugin dock widget to viewer</h1>
-<p>viewer.window.add_plugin_dock_widget(
-    plugin_name="napari-threedee", widget_name="sphere annotator"
-)</p>
-<h1 id="run-napari">run napari</h1>
-<p>viewer.layers.selection = [viewer.layers[0]]
-viewer.axes.visible = True
-viewer.camera.angles = (-15, 25, -30)
-viewer.camera.zoom *= 0.5
-napari.run()```</p>
-<p><strong>Total running time of the script:</strong> ( 0 minutes  0.996 seconds)</p>
+<p><img alt="ambient occlusion plugin" class="mkd-glr-single-img" src="../images/mkd_glr_ambient_occlusion_plugin_001.png" srcset="../images/mkd_glr_ambient_occlusion_plugin_001.png"></p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">napari</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">from</span> <span class="nn">vispy.io</span> <span class="kn">import</span> <span class="n">load_data_file</span><span class="p">,</span> <span class="n">read_mesh</span>
+
+
+<span class="c1"># Fetch datasets - this will download dataset if datasets are not found</span>
+<span class="n">vertices</span><span class="p">,</span> <span class="n">faces</span><span class="p">,</span> <span class="n">_</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">read_mesh</span><span class="p">(</span><span class="n">load_data_file</span><span class="p">(</span><span class="s1">'orig/triceratops.obj.gz'</span><span class="p">))</span>
+
+<span class="c1"># put the mesh right side up, scale it up (napari#3477) and fix faces handedness</span>
+<span class="n">vertices</span> <span class="o">*=</span> <span class="o">-</span><span class="mi">100</span>
+<span class="n">faces</span> <span class="o">=</span> <span class="n">faces</span><span class="p">[:,</span> <span class="p">::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+<span class="n">vertex_values</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">((</span><span class="nb">len</span><span class="p">(</span><span class="n">vertices</span><span class="p">)))</span>
+
+<span class="c1"># create an empty viewer</span>
+<span class="n">viewer</span> <span class="o">=</span> <span class="n">napari</span><span class="o">.</span><span class="n">Viewer</span><span class="p">(</span><span class="n">ndisplay</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+
+<span class="c1"># add the mesh</span>
+<span class="n">viewer</span><span class="o">.</span><span class="n">add_surface</span><span class="p">((</span><span class="n">vertices</span><span class="p">,</span> <span class="n">faces</span><span class="p">,</span> <span class="n">vertex_values</span><span class="p">),</span> <span class="n">name</span><span class="o">=</span><span class="s1">'triceratops'</span><span class="p">,</span> <span class="n">shading</span><span class="o">=</span><span class="s2">"smooth"</span><span class="p">)</span>
+
+<span class="c1"># open the plugin</span>
+<span class="n">viewer</span><span class="o">.</span><span class="n">window</span><span class="o">.</span><span class="n">add_plugin_dock_widget</span><span class="p">(</span>
+    <span class="n">plugin_name</span><span class="o">=</span><span class="s2">"napari-threedee"</span><span class="p">,</span> <span class="n">widget_name</span><span class="o">=</span><span class="s2">"ambient occlusion controls"</span>
+<span class="p">)</span>
+
+<span class="n">napari</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
+</code></pre></div>
+<p><strong>Total running time of the script:</strong> ( 0 minutes  0.670 seconds)</p>
 <div id="download_links"></div>
 
-<p><a class="md-button center" href="../sphere_annotator_plugin.py"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 512 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M288 32c0-17.7-14.3-32-32-32s-32 14.3-32 32v242.7l-73.4-73.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l128 128c12.5 12.5 32.8 12.5 45.3 0l128-128c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L288 274.7V32zM64 352c-35.3 0-64 28.7-64 64v32c0 35.3 28.7 64 64 64h384c35.3 0 64-28.7 64-64v-32c0-35.3-28.7-64-64-64H346.5l-45.3 45.3c-25 25-65.5 25-90.5 0L165.5 352H64zm368 56a24 24 0 1 1 0 48 24 24 0 1 1 0-48z"></path></svg></span> Download Python source code: sphere_annotator_plugin.py</a></p>
-<p><a class="md-button center" href="../sphere_annotator_plugin.ipynb"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 512 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M288 32c0-17.7-14.3-32-32-32s-32 14.3-32 32v242.7l-73.4-73.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l128 128c12.5 12.5 32.8 12.5 45.3 0l128-128c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L288 274.7V32zM64 352c-35.3 0-64 28.7-64 64v32c0 35.3 28.7 64 64 64h384c35.3 0 64-28.7 64-64v-32c0-35.3-28.7-64-64-64H346.5l-45.3 45.3c-25 25-65.5 25-90.5 0L165.5 352H64zm368 56a24 24 0 1 1 0 48 24 24 0 1 1 0-48z"></path></svg></span> Download Jupyter notebook: sphere_annotator_plugin.ipynb</a></p>
+<p><a class="md-button center" href="../ambient_occlusion_plugin.py"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 512 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M288 32c0-17.7-14.3-32-32-32s-32 14.3-32 32v242.7l-73.4-73.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l128 128c12.5 12.5 32.8 12.5 45.3 0l128-128c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L288 274.7V32zM64 352c-35.3 0-64 28.7-64 64v32c0 35.3 28.7 64 64 64h384c35.3 0 64-28.7 64-64v-32c0-35.3-28.7-64-64-64H346.5l-45.3 45.3c-25 25-65.5 25-90.5 0L165.5 352H64zm368 56a24 24 0 1 1 0 48 24 24 0 1 1 0-48z"></path></svg></span> Download Python source code: ambient_occlusion_plugin.py</a></p>
+<p><a class="md-button center" href="../ambient_occlusion_plugin.ipynb"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 512 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M288 32c0-17.7-14.3-32-32-32s-32 14.3-32 32v242.7l-73.4-73.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l128 128c12.5 12.5 32.8 12.5 45.3 0l128-128c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L288 274.7V32zM64 352c-35.3 0-64 28.7-64 64v32c0 35.3 28.7 64 64 64h384c35.3 0 64-28.7 64-64v-32c0-35.3-28.7-64-64-64H346.5l-45.3 45.3c-25 25-65.5 25-90.5 0L165.5 352H64zm368 56a24 24 0 1 1 0 48 24 24 0 1 1 0-48z"></path></svg></span> Download Jupyter notebook: ambient_occlusion_plugin.ipynb</a></p>
 <p><a class="mkd-glr-signature" href="https://mkdocs-gallery.github.io">Gallery generated by mkdocs-gallery</a></p></div>
 
 
