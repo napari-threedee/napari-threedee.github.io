@@ -2,217 +2,227 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://github.com/napari-threedee/napari-threedee/</loc>
-         <lastmod>2023-07-06</lastmod>
+         <lastmod>2023-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/napari-threedee/napari-threedee/API/geometry_utilities/</loc>
-         <lastmod>2023-07-06</lastmod>
+         <lastmod>2023-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/napari-threedee/napari-threedee/API/napari_utilities/</loc>
-         <lastmod>2023-07-06</lastmod>
+         <lastmod>2023-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/napari-threedee/napari-threedee/API/selection_utilities/</loc>
-         <lastmod>2023-07-06</lastmod>
+         <lastmod>2023-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/napari-threedee/napari-threedee/annotations/io/</loc>
-         <lastmod>2023-07-06</lastmod>
+         <lastmod>2023-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/napari-threedee/napari-threedee/annotations/point_spec/</loc>
-         <lastmod>2023-07-06</lastmod>
+         <lastmod>2023-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/napari-threedee/napari-threedee/annotations/specifications/</loc>
-         <lastmod>2023-07-06</lastmod>
+         <lastmod>2023-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/napari-threedee/napari-threedee/annotations/sphere_spec/</loc>
-         <lastmod>2023-07-06</lastmod>
+         <lastmod>2023-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/napari-threedee/napari-threedee/annotations/spline_spec/</loc>
-         <lastmod>2023-07-06</lastmod>
+         <lastmod>2023-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/napari-threedee/napari-threedee/dev_guides/core_concepts/</loc>
-         <lastmod>2023-07-06</lastmod>
+         <lastmod>2023-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/napari-threedee/napari-threedee/dev_guides/manipulators/</loc>
-         <lastmod>2023-07-06</lastmod>
+         <lastmod>2023-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/napari-threedee/napari-threedee/generated/gallery/</loc>
-         <lastmod>2023-07-06</lastmod>
+         <lastmod>2023-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/napari-threedee/napari-threedee/generated/gallery/library/camera_spline_library/</loc>
-         <lastmod>2023-07-06</lastmod>
+         <lastmod>2023-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/napari-threedee/napari-threedee/generated/gallery/library/layer_manipulator_library/</loc>
-         <lastmod>2023-07-06</lastmod>
+         <lastmod>2023-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/napari-threedee/napari-threedee/generated/gallery/library/mesh_headlight_library/</loc>
-         <lastmod>2023-07-06</lastmod>
+         <lastmod>2023-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/napari-threedee/napari-threedee/generated/gallery/library/mg_execution_times/</loc>
-         <lastmod>2023-07-06</lastmod>
+         <lastmod>2023-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/napari-threedee/napari-threedee/generated/gallery/library/path_annotator_library/</loc>
-         <lastmod>2023-07-06</lastmod>
+         <lastmod>2023-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/napari-threedee/napari-threedee/generated/gallery/library/point_annotator_library/</loc>
-         <lastmod>2023-07-06</lastmod>
+         <lastmod>2023-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/napari-threedee/napari-threedee/generated/gallery/library/render_plane_manipulator_library/</loc>
-         <lastmod>2023-07-06</lastmod>
+         <lastmod>2023-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/napari-threedee/napari-threedee/generated/gallery/library/sphere_annotator_library/</loc>
-         <lastmod>2023-07-06</lastmod>
+         <lastmod>2023-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/napari-threedee/napari-threedee/generated/gallery/library/surface_annotator_library/</loc>
-         <lastmod>2023-07-06</lastmod>
+         <lastmod>2023-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/napari-threedee/napari-threedee/generated/gallery/plugin/ambient_occlusion_plugin/</loc>
-         <lastmod>2023-07-06</lastmod>
+         <lastmod>2023-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/napari-threedee/napari-threedee/generated/gallery/plugin/camera_spline_plugin/</loc>
-         <lastmod>2023-07-06</lastmod>
+         <lastmod>2023-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/napari-threedee/napari-threedee/generated/gallery/plugin/layer_manipulator_plugin/</loc>
-         <lastmod>2023-07-06</lastmod>
+         <lastmod>2023-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/napari-threedee/napari-threedee/generated/gallery/plugin/mesh_headlight_plugin/</loc>
-         <lastmod>2023-07-06</lastmod>
+         <lastmod>2023-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/napari-threedee/napari-threedee/generated/gallery/plugin/mg_execution_times/</loc>
-         <lastmod>2023-07-06</lastmod>
+         <lastmod>2023-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/napari-threedee/napari-threedee/generated/gallery/plugin/path_annotator_plugin/</loc>
-         <lastmod>2023-07-06</lastmod>
+         <lastmod>2023-07-07</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://github.com/napari-threedee/napari-threedee/generated/gallery/plugin/plane_labeler_plugin/</loc>
+         <lastmod>2023-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/napari-threedee/napari-threedee/generated/gallery/plugin/point_annotator_plugin/</loc>
-         <lastmod>2023-07-06</lastmod>
+         <lastmod>2023-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/napari-threedee/napari-threedee/generated/gallery/plugin/points_manipulator_plugin/</loc>
-         <lastmod>2023-07-06</lastmod>
+         <lastmod>2023-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/napari-threedee/napari-threedee/generated/gallery/plugin/render_plane_manipulator_plugin/</loc>
-         <lastmod>2023-07-06</lastmod>
+         <lastmod>2023-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/napari-threedee/napari-threedee/generated/gallery/plugin/sphere_annotator_plugin/</loc>
-         <lastmod>2023-07-06</lastmod>
+         <lastmod>2023-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/napari-threedee/napari-threedee/generated/gallery/plugin/spline_annotator_plugin/</loc>
-         <lastmod>2023-07-06</lastmod>
+         <lastmod>2023-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/napari-threedee/napari-threedee/generated/gallery/plugin/surface_annotator_plugin/</loc>
-         <lastmod>2023-07-06</lastmod>
+         <lastmod>2023-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/napari-threedee/napari-threedee/getting_started/developers/</loc>
-         <lastmod>2023-07-06</lastmod>
+         <lastmod>2023-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/napari-threedee/napari-threedee/getting_started/users/</loc>
-         <lastmod>2023-07-06</lastmod>
+         <lastmod>2023-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/napari-threedee/napari-threedee/how_to/ambient_occlusion/</loc>
-         <lastmod>2023-07-06</lastmod>
+         <lastmod>2023-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/napari-threedee/napari-threedee/how_to/layer_manipulator/</loc>
-         <lastmod>2023-07-06</lastmod>
+         <lastmod>2023-07-07</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://github.com/napari-threedee/napari-threedee/how_to/plane_labeler/</loc>
+         <lastmod>2023-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/napari-threedee/napari-threedee/how_to/point_annotator/</loc>
-         <lastmod>2023-07-06</lastmod>
+         <lastmod>2023-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/napari-threedee/napari-threedee/how_to/point_manipulator/</loc>
-         <lastmod>2023-07-06</lastmod>
+         <lastmod>2023-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/napari-threedee/napari-threedee/how_to/render_plane_manipulator/</loc>
-         <lastmod>2023-07-06</lastmod>
+         <lastmod>2023-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/napari-threedee/napari-threedee/how_to/sphere_annotator/</loc>
-         <lastmod>2023-07-06</lastmod>
+         <lastmod>2023-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/napari-threedee/napari-threedee/how_to/spline_annotator/</loc>
-         <lastmod>2023-07-06</lastmod>
+         <lastmod>2023-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/napari-threedee/napari-threedee/tutorials/tutorials/</loc>
-         <lastmod>2023-07-06</lastmod>
+         <lastmod>2023-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>
