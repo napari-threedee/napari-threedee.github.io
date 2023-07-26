@@ -19,7 +19,7 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.18">
+      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.19">
     
     
       
@@ -27,7 +27,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.26e3688c.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.eebd395e.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.ecc896b0.min.css">
@@ -1391,7 +1391,7 @@
 
 
 <h2 id="napari_threedee.utils.geometry" class="doc doc-heading">
-          <code>napari_threedee.utils.geometry</code>
+            <code>napari_threedee.utils.geometry</code>
 
 
 </h2>
@@ -1401,6 +1401,7 @@
   
 
   <div class="doc doc-children">
+
 
 
 
@@ -1424,11 +1425,13 @@
   
       <p>Returns the angle in radians between vectors 'v1' and 'v2'.</p>
 
+
+
   <table>
     <thead>
       <tr>
         <th><b>PARAMETER</b></th>
-        <th><b>DESCRIPTION</b></th>
+        <th><b> DESCRIPTION</b></th>
       </tr>
     </thead>
     <tbody>
@@ -1478,6 +1481,8 @@ Must be orthogonal to vector_0 and vector_1.</p>
     </tbody>
   </table>
 
+
+
   <table>
     <thead>
       <tr>
@@ -1505,9 +1510,9 @@ Must be orthogonal to vector_0 and vector_1.</p>
     </tbody>
   </table>
 
-      <details class="quote">
-        <summary>Source code in <code>src/napari_threedee/utils/geometry.py</code></summary>
-        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 6</span>
+          <details class="quote">
+            <summary>Source code in <code>src/napari_threedee/utils/geometry.py</code></summary>
+            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 6</span>
 <span class="normal"> 7</span>
 <span class="normal"> 8</span>
 <span class="normal"> 9</span>
@@ -1565,10 +1570,11 @@ Must be orthogonal to vector_0 and vector_1.</p>
 
     <span class="k">return</span> <span class="n">angle_sign</span> <span class="o">*</span> <span class="n">unsigned_angle</span>
 </code></pre></div></td></tr></table></div>
-      </details>
+          </details>
   </div>
 
 </div>
+
 
 <div class="doc doc-object doc-function">
 
@@ -1584,11 +1590,13 @@ Must be orthogonal to vector_0 and vector_1.</p>
   
       <p>Create the rotation matrix for a specified angle of rotation around a vector.</p>
 
+
+
   <table>
     <thead>
       <tr>
         <th><b>PARAMETER</b></th>
-        <th><b>DESCRIPTION</b></th>
+        <th><b> DESCRIPTION</b></th>
       </tr>
     </thead>
     <tbody>
@@ -1610,6 +1618,8 @@ Must be orthogonal to vector_0 and vector_1.</p>
   </table>
       <p>vector : np.ndarray
     The vector around which to perform the rotation.</p>
+
+
 
   <table>
     <thead>
@@ -1638,9 +1648,9 @@ Must be orthogonal to vector_0 and vector_1.</p>
     </tbody>
   </table>
 
-      <details class="quote">
-        <summary>Source code in <code>src/napari_threedee/utils/geometry.py</code></summary>
-        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">37</span>
+          <details class="quote">
+            <summary>Source code in <code>src/napari_threedee/utils/geometry.py</code></summary>
+            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">37</span>
 <span class="normal">38</span>
 <span class="normal">39</span>
 <span class="normal">40</span>
@@ -1716,10 +1726,11 @@ Must be orthogonal to vector_0 and vector_1.</p>
 
     <span class="k">return</span> <span class="n">rotation_matrix</span>
 </code></pre></div></td></tr></table></div>
-      </details>
+          </details>
   </div>
 
 </div>
+
 
 <div class="doc doc-object doc-function">
 
@@ -1735,11 +1746,13 @@ Must be orthogonal to vector_0 and vector_1.</p>
   
       <p>Determine whether an nD point is inside an nD bounding box.</p>
 
+
+
   <table>
     <thead>
       <tr>
         <th><b>PARAMETER</b></th>
-        <th><b>DESCRIPTION</b></th>
+        <th><b> DESCRIPTION</b></th>
       </tr>
     </thead>
     <tbody>
@@ -1775,9 +1788,9 @@ As returned by <code>Layer._extent_data</code>.</p>
     </tbody>
   </table>
 
-      <details class="quote">
-        <summary>Source code in <code>src/napari_threedee/utils/geometry.py</code></summary>
-        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">77</span>
+          <details class="quote">
+            <summary>Source code in <code>src/napari_threedee/utils/geometry.py</code></summary>
+            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">77</span>
 <span class="normal">78</span>
 <span class="normal">79</span>
 <span class="normal">80</span>
@@ -1803,7 +1816,7 @@ As returned by <code>Layer._extent_data</code>.</p>
         <span class="k">return</span> <span class="kc">True</span>
     <span class="k">return</span> <span class="kc">False</span>
 </code></pre></div></td></tr></table></div>
-      </details>
+          </details>
   </div>
 
 </div>
