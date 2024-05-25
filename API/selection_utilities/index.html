@@ -22,7 +22,7 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.22">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.24">
     
     
       
@@ -30,7 +30,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.732c4fb1.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.6543a935.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
@@ -56,13 +56,13 @@
     
       <link rel="stylesheet" href="../../stylesheets/extra.css">
     
-      <link rel="stylesheet" href="../../sg_gallery-rendered-html.css">
-    
       <link rel="stylesheet" href="../../sg_gallery-dataframe.css">
     
-      <link rel="stylesheet" href="../../sg_gallery.css">
-    
       <link rel="stylesheet" href="../../sg_gallery-binder.css">
+    
+      <link rel="stylesheet" href="../../sg_gallery-rendered-html.css">
+    
+      <link rel="stylesheet" href="../../sg_gallery.css">
     
     <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
@@ -1930,12 +1930,11 @@
 
 
 <a id="napari_threedee.utils.selection_utils"></a>
-  <div class="doc doc-contents first">
+    <div class="doc doc-contents first">
 
-  
+
 
   <div class="doc doc-children">
-
 
 
 
@@ -1948,20 +1947,19 @@
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="napari_threedee.utils.selection_utils.distance_between_point_and_line_segment_2d" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">distance_between_point_and_line_segment_2d</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="n">p1</span><span class="p">,</span> <span class="n">p2</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">distance_between_point_and_line_segment_2d</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="n">p1</span><span class="p">,</span> <span class="n">p2</span><span class="p">)</span></code>
 
 </h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Calculate the distance between a point p and a line segment p1, p2</p>
 
-          <details class="quote">
-            <summary>Source code in <code>src/napari_threedee/utils/selection_utils.py</code></summary>
-            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">46</span>
+            <details class="quote">
+              <summary>Source code in <code>src/napari_threedee/utils/selection_utils.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">46</span>
 <span class="normal">47</span>
 <span class="normal">48</span>
 <span class="normal">49</span>
@@ -1989,24 +1987,22 @@
 
     <span class="k">return</span> <span class="n">numerator</span> <span class="o">/</span> <span class="n">denominator</span>
 </code></pre></div></td></tr></table></div>
-          </details>
-  </div>
+            </details>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="napari_threedee.utils.selection_utils.select_sphere_from_click" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">select_sphere_from_click</span><span class="p">(</span><span class="n">click_point</span><span class="p">,</span> <span class="n">view_direction</span><span class="p">,</span> <span class="n">sphere_centroids</span><span class="p">,</span> <span class="n">sphere_diameter</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">select_sphere_from_click</span><span class="p">(</span><span class="n">click_point</span><span class="p">,</span> <span class="n">view_direction</span><span class="p">,</span> <span class="n">sphere_centroids</span><span class="p">,</span> <span class="n">sphere_diameter</span><span class="p">)</span></code>
 
 </h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Determine which, if any spheres are intersected by a click ray.</p>
 <p>If multiple spheres are intersected, the closest sphere to the click point
 (ray start) will be returned.</p>
@@ -2024,9 +2020,9 @@ sphere_diameter : float
     The index for the sphere that was intersected.
     Returns None if no spheres are intersected.</p>
 
-          <details class="quote">
-            <summary>Source code in <code>src/napari_threedee/utils/selection_utils.py</code></summary>
-            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">135</span>
+            <details class="quote">
+              <summary>Source code in <code>src/napari_threedee/utils/selection_utils.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">135</span>
 <span class="normal">136</span>
 <span class="normal">137</span>
 <span class="normal">138</span>
@@ -2146,24 +2142,22 @@ sphere_diameter : float
 
     <span class="k">return</span> <span class="n">selection</span>
 </code></pre></div></td></tr></table></div>
-          </details>
-  </div>
+            </details>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="napari_threedee.utils.selection_utils.select_triangle_from_click" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">select_triangle_from_click</span><span class="p">(</span><span class="n">click_point</span><span class="p">,</span> <span class="n">view_direction</span><span class="p">,</span> <span class="n">triangles</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">select_triangle_from_click</span><span class="p">(</span><span class="n">click_point</span><span class="p">,</span> <span class="n">view_direction</span><span class="p">,</span> <span class="n">triangles</span><span class="p">)</span></code>
 
 </h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Determine if a line goes through any of a set of triangles.</p>
 <p>For example, this could be used to determine if a click was
 in a triangle of a mesh.</p>
@@ -2182,9 +2176,9 @@ triangles : np.ndarray
 <p>in_triangles : np.ndarray
     (n,) boolean array that is True of the ray intersects the triangle</p>
 
-          <details class="quote">
-            <summary>Source code in <code>src/napari_threedee/utils/selection_utils.py</code></summary>
-            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 62</span>
+            <details class="quote">
+              <summary>Source code in <code>src/napari_threedee/utils/selection_utils.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 62</span>
 <span class="normal"> 63</span>
 <span class="normal"> 64</span>
 <span class="normal"> 65</span>
@@ -2292,8 +2286,8 @@ triangles : np.ndarray
 
     <span class="k">return</span> <span class="n">triangle_index</span>
 </code></pre></div></td></tr></table></div>
-          </details>
-  </div>
+            </details>
+    </div>
 
 </div>
 
@@ -2301,7 +2295,7 @@ triangles : np.ndarray
 
   </div>
 
-  </div>
+    </div>
 
 </div></div>
 
@@ -2401,7 +2395,7 @@ triangles : np.ndarray
     <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "search.highlight", "search.suggest", "content.tabs.link", "navigation.indexes"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.5cfa9459.min.js"></script>
+      <script src="../../assets/javascripts/bundle.081f42fc.min.js"></script>
       
     
   </body>
