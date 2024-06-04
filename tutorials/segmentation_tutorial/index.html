@@ -1837,11 +1837,11 @@
 <li>A computer with a working conda/mamba installation. We will use conda/mamba to manage the environment we install the dependencies into.  </li>
 </ol>
 <h2 id="setup">Setup</h2>
-<p>Before trying the tutorial, please initialize your python environment as described below. Note that we recommend using <code>mamba</code> to install/manage dependencies. If you are using <code>conda</code>, you can simply replace <code>mamba</code> with <code>conda</code> in the commands below</p>
+<p>Before trying the tutorial, please initialize your python environment as described below. Note that we recommend using <code>mamba</code> to install/manage dependencies. If you are using <code>conda</code>, you can simply replace <code>mamba</code> with <code>conda</code> in the commands below, but we recommend you that the conda version is &gt;23.10</p>
 <ol>
 <li>
 <p>Create a new environment called <code>seg-env</code> with python 3.9. In your terminal, enter the following command.</p>
-<div class="highlight"><pre><span></span><code>mamba<span class="w"> </span>create<span class="w"> </span>-n<span class="w"> </span>seg-env<span class="w"> </span><span class="nv">python</span><span class="o">=</span><span class="m">3</span>.9
+<div class="highlight"><pre><span></span><code>mamba<span class="w"> </span>create<span class="w"> </span>-n<span class="w"> </span>seg-env<span class="w"> </span>-c<span class="w"> </span>conda-forge<span class="w"> </span><span class="nv">python</span><span class="o">=</span><span class="m">3</span>.9
 </code></pre></div>
 </li>
 <li>
@@ -1851,17 +1851,18 @@
 </li>
 <li>
 <p>Install the dependencies.</p>
-<div class="highlight"><pre><span></span><code>mamba<span class="w"> </span>install<span class="w"> </span>-c<span class="w"> </span>conda-forge<span class="w"> </span>napari<span class="w"> </span>pyopencl
-pip<span class="w"> </span>install<span class="w"> </span>napari-accelerated-pixel-and-object-classification
+<div class="highlight"><pre><span></span><code>mamba<span class="w"> </span>install<span class="w"> </span>-c<span class="w"> </span>conda-forge<span class="w"> </span>napari<span class="w"> </span>pyqt<span class="w"> </span>napari-threedee<span class="w"> </span>napari-accelerated-pixel-and-object-classification
 </code></pre></div>
 </li>
 <li>
-<p>If your are on Mac OS, install this openCL wrapper (used by APOC for GPU acceleration).</p>
+<p>If your are on Mac OS, install this openCL wrapper (used by APOC for GPU acceleration):</p>
 <div class="highlight"><pre><span></span><code>mamba<span class="w"> </span>install<span class="w"> </span>-c<span class="w"> </span>conda-forge<span class="w"> </span>ocl_icd_wrapper_apple
 </code></pre></div>
 </li>
 <li>
-<p>If you are on linux, install this openCL wrapper (used by APOC for GPU acceleration).</p>
+<p>If you are on linux, install this openCL wrapper (used by APOC for GPU acceleration):</p>
+<div class="highlight"><pre><span></span><code>mamba<span class="w"> </span>install<span class="w"> </span>-c<span class="w"> </span>conda-forge<span class="w"> </span>ocl-icd-system
+</code></pre></div>
 </li>
 </ol>
 <h2 id="instructions">Instructions</h2>
@@ -1878,7 +1879,7 @@ pip<span class="w"> </span>install<span class="w"> </span>napari-accelerated-pix
 <p><img alt="napari opened" src="https://github.com/napari-threedee/napari-threedee/assets/1120672/7e59814f-b9ee-40b1-88f6-03ed5ae7adb0"></p>
 </li>
 <li>
-<p>Open the 3D cells sample image from the File menu. File -&gt; Open sample -&gt; napari -&gt; Cells (3D + 2 Ch). This will load two image layers: DAPI-stained nuclei and the cell membranes.</p>
+<p>Open the 3D cells sample image from the File menu. <strong>File -&gt; Open Sample -&gt; napari builtins -&gt; Cells (3D+2Ch)</strong>. This will load two image layers: DAPI-stained nuclei and the cell membranes.</p>
 <p><img alt="sample data" src="https://github.com/napari-threedee/napari-threedee/assets/1120672/cd954faf-50d2-4f5c-a38d-f87868ed5e8c"></p>
 </li>
 <li>
@@ -1897,12 +1898,12 @@ pip<span class="w"> </span>install<span class="w"> </span>napari-accelerated-pix
 <p><img alt="plane depiction" src="https://github.com/napari-threedee/napari-threedee/assets/1120672/22d3290b-5afc-42f0-b566-e3b01249a1d8"></p>
 </li>
 <li>
-<p>Use the napari-threedee render plane manipulator to move the rendering plane and explore the image. Open the render plane manipulator from the plugin menu: Plugins -&gt; napari-threedee -&gt; render plane manipulator. Click the "activate" button the start the manipulator. Then use it to rotate the rendering plane to find a plane of interest.</p>
+<p>Use the napari-threedee render plane manipulator to move the rendering plane and explore the image. Open the render plane manipulator from the plugin menu: <strong>Plugins -&gt; napari-threedee -&gt; render plane manipulator</strong>. Click the "activate" button the start the manipulator. Then use it to rotate the rendering plane to find a plane of interest. Note: you can double-click with the mouse to re-position the manipulator on the plane.</p>
 <p><img alt="plane manipulator" src="https://github.com/napari-threedee/napari-threedee/assets/1120672/db651930-a6f3-4329-8ec7-50a01b701093">
 <div class="video-container"><video style="position:relative;width:100%;height:22.172vw" loop controls autoplay alt="type:video"><source src="https://github.com/napari-threedee/napari-threedee/assets/1120672/2f0b7490-9281-4a19-b59f-7c189975ad37" type="video/mp4"></source></video></div></p>
 </li>
 <li>
-<p>Next, we will use the label annotator to paint labels directly on the rendering plane. We will use these labels to train a random forest classifier to segment the nuclei. Open the label annotator plugin from the plugins menu: Plugins -&gt; napari-threedee -&gt; label annotator. Activate the label annotator by clicking the "activate" button.</p>
+<p>Next, we will use the label annotator to paint labels directly on the rendering plane. We will use these labels to train a random forest classifier to segment the nuclei. Open the label annotator plugin from the plugins menu: <strong>Plugins -&gt; napari-threedee -&gt; label annotator</strong>. Activate the label annotator by clicking the "activate" button.</p>
 <p><img alt="label annotator" src="https://github.com/napari-threedee/napari-threedee/assets/1120672/58ccdf39-97ef-4f1a-af1f-9d86dac402e8"></p>
 </li>
 <li>
@@ -1922,7 +1923,7 @@ pip<span class="w"> </span>install<span class="w"> </span>napari-accelerated-pix
 <p><div class="video-container"><video style="position:relative;width:100%;height:22.172vw" loop controls autoplay alt="type:video"><source src="https://github.com/napari-threedee/napari-threedee/assets/1120672/1d75bd05-ca03-4ba9-a0f6-2608442e5939" type="video/mp4"></source></video></div></p>
 </li>
 <li>
-<p>Finally, we can train the random forest classifier. Open the napari-APOC semantic segmentation plugin: Plugins -&gt; napari-accelerated-object-and-pixel-classification -&gt; Semantic Segmentation. First, select the "nuclei" layer in the "Select images..." box. Then select the "Label" layer in the "ground truth" combobox. Finally, click the "Train" button. When the training has completed, the result will be added as a new layer called "Result of PixelClassifier". Notice that it is hard to see the segmented nuclei because both the background and nuclei predictions are shown together.</p>
+<p>Finally, we can train the random forest classifier. Open the napari-APOC semantic segmentation plugin: <strong>Plugins -&gt; napari-accelerated-object-and-pixel-classification -&gt; Semantic Segmentation</strong>. Note: for the other two widgets, you can click the middle, eye icon to hide them. First, select the "nuclei" layer in the "Select images (channels) used for training" box at the top. Then select the "Label" layer in the "Select ground truth annotation" combobox in the lower portion of the widget. Finally, click the "Train" button—we will leave the other parameters as defaults. When the training has completed, the result will be added as a new layer called "Result of PixelClassifier". Notice that it is hard to see the segmented nuclei because both the background and nuclei predictions are shown together.</p>
 <p><img alt="semantic segmentation" src="https://github.com/napari-threedee/napari-threedee/assets/1120672/11c953d5-aa55-443a-a5ce-26b1b65a4204">
 <img alt="segmentation result" src="https://github.com/napari-threedee/napari-threedee/assets/1120672/8f7ed183-99a1-4e48-bec0-3422211bd449"></p>
 </li>
