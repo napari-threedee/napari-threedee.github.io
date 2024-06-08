@@ -22,7 +22,7 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.25">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.26">
     
     
       
@@ -193,7 +193,7 @@
       
     </form>
     <div class="md-search__output">
-      <div class="md-search__scrollwrap" data-md-scrollfix>
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
         <div class="md-search-result" data-md-component="search-result">
           <div class="md-search-result__meta">
             Initializing search
@@ -668,11 +668,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../spline_annotator/" class="md-nav__link">
+      <a href="../path_annotator/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    annotate splines in 3D
+    annotate paths in 3D
   </span>
   
 
@@ -710,7 +710,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../plane_labeler/" class="md-nav__link">
+      <a href="../label_annotator/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1318,8 +1318,6 @@
       
         
       
-        
-      
     
     
     
@@ -1397,7 +1395,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../generated/gallery/plugin/plane_labeler_plugin/" class="md-nav__link">
+      <a href="../../generated/gallery/plugin/label_annotator_plugin/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1423,6 +1421,27 @@
   
   <span class="md-ellipsis">
     Ambient occlusion (plugin)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../generated/gallery/plugin/sphere_annotator_plugin/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sphere annotator (plugin)
   </span>
   
 
@@ -1523,32 +1542,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../generated/gallery/plugin/spline_annotator_plugin/" class="md-nav__link">
+      <a href="../../generated/gallery/plugin/path_annotator_plugin/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Spline annotator (plugin)
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../generated/gallery/plugin/sphere_annotator_plugin/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Sphere annotator (plugin)
+    Path point annotator (plugin)
   </span>
   
 
@@ -1570,27 +1568,6 @@
   
   <span class="md-ellipsis">
     Plane point annotator (plugin)
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../generated/gallery/plugin/path_annotator_plugin/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Path point annotator (plugin)
   </span>
   
 
@@ -1797,19 +1774,27 @@
 <h2 id="instructions">Instructions</h2>
 <ol>
 <li>
-<p>Open the <code>plane_point_annotator.py</code> example from the examples folder. The viewer is initialized in 3D rendering mode in plane rendering mode. We are viewing two 3D volumes, each with one plane being actively rendered.</p>
+<p>To run this example, first download the script from the <a href="https://napari-threedee.github.io/generated/gallery/plugin/point_annotator_plugin/">Examples Gallery page</a>; the link is at the bottom of the web page. Save the file to a memorable location. Or, if you've cloned this repository, the script can be found at <code>napari-threedee/docs/examples/plugin/point_annotator_plugin.py</code>. </p>
+</li>
+<li>
+<p>Ensure you have activated a virtual environment with napari-threedee installed. Change directories to the script location and then execute the script using:
+    </p><div class="highlight"><pre><span></span><code>python<span class="w"> </span>point_annotator_plugin.py
+</code></pre></div>
+</li>
+<li>
+<p>The viewer is initialized in 3D rendering mode in plane rendering mode. We are viewing two 3D volumes, each with one plane being actively rendered. Note that depending on your versions of <code>napari-threedee</code> and <code>napari</code> you may see subtle visual differences between your viewer and the screenshots/videos here.</p>
 <p><img alt="example opened" src="https://user-images.githubusercontent.com/1120672/225954648-08094784-e538-4bdb-9d5e-2f39b3770a16.png"></p>
 </li>
 <li>
-<p>Activate the plugin. Select the <code>orange</code> layer for the "image layer" and <code>Points</code> for the "points layer". Finally click the "activate" button. This will add points to the <code>Points</code> layer based on the intersection of the click ray with the currently rendered <code>orange</code> layer.</p>
+<p>Activate the plugin. Select the <code>orange plane</code> layer for the "image layer" and <code>Points</code> for the "points layer". Finally click the "activate" button. This will add points to the <code>Points</code> layer based on the intersection of the click ray with the currently rendered <code>orange plane</code> layer.</p>
 <p><img alt="select layer" src="https://user-images.githubusercontent.com/1120672/225953774-cf391f47-b769-493d-8e94-caa5f92ebe6a.png"></p>
 </li>
 <li>
-<p>You can translate the rendered orange play along its normal vector by holding the shift key while clicking  with the left mouse button and dragging the plane.</p>
+<p>You can translate the <code>orange plane</code> layer render plane along its normal vector by holding the shift key while clicking with the left mouse button and dragging the plane. Alternately, you can re-position the render plane using <a href="https://napari-threedee.github.io/how_to/render_plane_manipulator/">the render plane manipulator</a>.</p>
 <p><div class="video-container"><video style="position:relative;width:100%;height:22.172vw" loop controls autoplay alt="type:video"><source src="https://user-images.githubusercontent.com/1120672/225954237-e77891ee-2302-47f6-ad14-963da44f8dac.mov" type="video/mp4"></source></video></div></p>
 </li>
 <li>
-<p>You can add points on the rendered plane by holding the alt key while clicking with the left mouse button. You can move the plane to annotate a new plane by clicking and dragging with the shift key as in step 3.</p>
+<p>You can add points on the <code>orange plane</code> layer rendered plane, by holding the alt key while clicking with the left mouse button. Note you must ensure that the <code>orange plane</code> layer is selected, the points will be automatically placed in the <code>Points</code> layer. You can move the plane to annotate a new plane by clicking and dragging with the shift key held down as in step 5.</p>
 <p><div class="video-container"><video style="position:relative;width:100%;height:22.172vw" loop controls autoplay alt="type:video"><source src="https://user-images.githubusercontent.com/1120672/225955156-5c05c7a4-814c-4aa0-89b0-9dee8713e8c3.mov" type="video/mp4"></source></video></div></p>
 </li>
 </ol></div>
@@ -1910,7 +1895,7 @@
     <script id="__config" type="application/json">{"base": "../..", "features": ["search.highlight", "search.suggest", "content.tabs.link", "content.code.copy", "navigation.indexes"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.081f42fc.min.js"></script>
+      <script src="../../assets/javascripts/bundle.ad660dcc.min.js"></script>
       
     
   </body>

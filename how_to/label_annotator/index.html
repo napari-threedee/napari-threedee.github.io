@@ -12,21 +12,21 @@
         <meta name="author" content="Alister Burt and Kevin Yamauchi">
       
       
-        <link rel="canonical" href="https://github.com/napari-threedee/napari-threedee/how_to/spline_annotator/">
+        <link rel="canonical" href="https://github.com/napari-threedee/napari-threedee/how_to/label_annotator/">
       
       
-        <link rel="prev" href="../sphere_annotator/">
+        <link rel="prev" href="../ambient_occlusion/">
       
       
-        <link rel="next" href="../ambient_occlusion/">
+        <link rel="next" href="../../dev_guides/core_concepts/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.25">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.26">
     
     
       
-        <title>annotate splines in 3D - napari-threedee</title>
+        <title>paint labels on arbitrary planes - napari-threedee</title>
       
     
     
@@ -92,7 +92,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#annotate-3d-splines" class="md-skip">
+        <a href="#paint-labels-on-arbitrary-planes" class="md-skip">
           Skip to content
         </a>
       
@@ -128,7 +128,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              annotate splines in 3D
+              paint labels on arbitrary planes
             
           </span>
         </div>
@@ -193,7 +193,7 @@
       
     </form>
     <div class="md-search__output">
-      <div class="md-search__scrollwrap" data-md-scrollfix>
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
         <div class="md-search-result" data-md-component="search-result">
           <div class="md-search-result__meta">
             Initializing search
@@ -607,6 +607,48 @@
                 
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="../path_annotator/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    annotate paths in 3D
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ambient_occlusion/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    add ambient occlusion to a surface
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
     
   
   
@@ -623,7 +665,7 @@
           
   
   <span class="md-ellipsis">
-    annotate splines in 3D
+    paint labels on arbitrary planes
   </span>
   
 
@@ -634,7 +676,7 @@
         
   
   <span class="md-ellipsis">
-    annotate splines in 3D
+    paint labels on arbitrary planes
   </span>
   
 
@@ -677,48 +719,6 @@
   
 </nav>
       
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../ambient_occlusion/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    add ambient occlusion to a surface
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../plane_labeler/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    paint labels on arbitrary planes
-  </span>
-  
-
-      </a>
     </li>
   
 
@@ -1318,8 +1318,6 @@
       
         
       
-        
-      
     
     
     
@@ -1397,7 +1395,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../generated/gallery/plugin/plane_labeler_plugin/" class="md-nav__link">
+      <a href="../../generated/gallery/plugin/label_annotator_plugin/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1423,6 +1421,27 @@
   
   <span class="md-ellipsis">
     Ambient occlusion (plugin)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../generated/gallery/plugin/sphere_annotator_plugin/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sphere annotator (plugin)
   </span>
   
 
@@ -1523,32 +1542,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../generated/gallery/plugin/spline_annotator_plugin/" class="md-nav__link">
+      <a href="../../generated/gallery/plugin/path_annotator_plugin/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Spline annotator (plugin)
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../generated/gallery/plugin/sphere_annotator_plugin/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Sphere annotator (plugin)
+    Path point annotator (plugin)
   </span>
   
 
@@ -1570,27 +1568,6 @@
   
   <span class="md-ellipsis">
     Plane point annotator (plugin)
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../generated/gallery/plugin/path_annotator_plugin/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Path point annotator (plugin)
   </span>
   
 
@@ -1790,31 +1767,36 @@
   
 
 
-<div><h1 id="annotate-3d-splines">Annotate 3D splines</h1>
+<div><h1 id="paint-labels-on-arbitrary-planes">Paint labels on arbitrary planes</h1>
 <h2 id="summary">Summary</h2>
-<p>Spines are useful for describing paths through your data. This tutorial describes how use the spline annotator to interactively add splines in a 3D image.</p>
-<p><div class="video-container"><video style="position:relative;width:100%;height:22.172vw" loop controls autoplay alt="type:video"><source src="https://user-images.githubusercontent.com/1120672/225981766-0e586d50-c90c-4c3e-a5e9-c5b30ba6bed2.mov" type="video/mp4"></source></video></div></p>
+<p>Painting labels is useful for annotating voxels by semantic meaning or instance. Painting labels on planes in 3D is useful to gain full context. Additionally, the axis aligned slicing may not be optimal for viewing your structure of interest. Here we describe how to paint labels on arbitrary planes in 3D.</p>
+<p><div class="video-container"><video style="position:relative;width:100%;height:22.172vw" loop controls autoplay alt="type:video"><source src="https://github.com/napari-threedee/napari-threedee/assets/1120672/6750b262-6c79-425f-8af5-d7459ba28a16" type="video/mp4"></source></video></div></p>
 <h2 id="instructions">Instructions</h2>
 <ol>
 <li>
-<p>Open the <code>spline_annotator.py</code> example from the examples folder. The viewer is initialized in 3D rendering mode in plane rendering mode. We are viewing two 3D volumes, each with one plane being actively rendered.</p>
-<p><img alt="example opened" src="https://user-images.githubusercontent.com/1120672/225978705-55570907-8f1d-4fc9-9f72-883c6c790516.png"></p>
+<p>To run this example, first download the script from the <a href="https://napari-threedee.github.io/generated/gallery/plugin/label_annotator_plugin/">Examples Gallery page</a>; the link is at the bottom of the web page. Save the file to a memorable location. Or, if you've cloned this repository, the script can be found at <code>napari-threedee/docs/examples/plugin/label_annotator_plugin.py</code>. </p>
 </li>
 <li>
-<p>Activate the plugin. Select the <code>orange</code> layer for the "image layer" and click the "activate" button.</p>
-<p><img alt="layer selected" src="https://user-images.githubusercontent.com/1120672/225978983-2a25f87d-8b7c-4e4f-906a-db0e11b75a64.png"></p>
+<p>Ensure you have activated a virtual environment with napari-threedee installed. Change directories to the script location and then execute the script using:
+    </p><div class="highlight"><pre><span></span><code>python<span class="w"> </span>label_annotator_plugin.py
+</code></pre></div>
 </li>
 <li>
-<p>You can translate the rendered orange play along its normal vector by holding the shift key while clicking  with the left mouse button and dragging the plane.</p>
-<p><div class="video-container"><video style="position:relative;width:100%;height:22.172vw" loop controls autoplay alt="type:video"><source src="https://user-images.githubusercontent.com/1120672/225979078-c71d1759-78e5-40c3-8304-cd71664023b7.mov" type="video/mp4"></source></video></div></p>
+<p>The viewer is initialized in 3D rendering mode in plane rendering mode. We are viewing a 3D volume with one plane being actively rendered. The "label annotator" widget will be visible and a <code>Labels</code> layer will be present in the viewer. Note that depending on your versions of <code>napari-threedee</code> and <code>napari</code> you may see subtle visual differences between your viewer and the screenshots/videos here.</p>
+<p><img alt="example opened" src="https://github.com/napari-threedee/napari-threedee/assets/1120672/09a6537d-882c-4b2c-95ca-e9e7ea173c8e"></p>
 </li>
 <li>
-<p>You can add a spline by ctrl+left mouse button clicking on the rendered plane to add points to the plane. The annotator will fit a third order spline when 4 or more points have been added. If you don't want the spline to be automatically fit, you can uncheck the "automatically fit spline" checkbox. If you are not automatically fitting the spline, you need to click the "fit spline" button to manually initiate the spline fitting.</p>
-<p><div class="video-container"><video style="position:relative;width:100%;height:22.172vw" loop controls autoplay alt="type:video"><source src="https://user-images.githubusercontent.com/1120672/225979471-28d50f30-c97e-48a8-9349-7c776ce06427.mov" type="video/mp4"></source></video></div></p>
+<p>Activate the plugin. Select the <code>plane</code> layer for the "image layer" and <code>Labels</code> for the "labels layer" and click the "activate" button.</p>
+<p><img alt="activate plugin" src="https://github.com/napari-threedee/napari-threedee/assets/1120672/28f3f629-e62f-4d6f-8f33-c467b2cee731"></p>
 </li>
 <li>
-<p>You can add additional splines by advancing the "current spline index". Each spline is given a unique index. Points are added to the spline whose index is currently selected. Additionally, to make a spline that doesn't lie in a single plane, you can add points to mutiple planes by moving the rendered plane.</p>
-<p><div class="video-container"><video style="position:relative;width:100%;height:22.172vw" loop controls autoplay alt="type:video"><source src="https://user-images.githubusercontent.com/1120672/225980864-27310f9a-3fc2-4764-a4f2-909b92471edd.mov" type="video/mp4"></source></video></div></p>
+<p>With the <code>plane</code> image layer selected, you can translate the rendering plane along its normal vector holding the shift key while clicking  with the left mouse button and dragging the plane. Alternately, you can re-position the render plane using <a href="https://napari-threedee.github.io/how_to/render_plane_manipulator/">the render plane manipulator</a>.</p>
+<p><div class="video-container"><video style="position:relative;width:100%;height:22.172vw" loop controls autoplay alt="type:video"><source src="https://github.com/napari-threedee/napari-threedee/assets/1120672/62871cf6-7f97-4808-917d-dbe7bd0e42d6" type="video/mp4"></source></video></div></p>
+</li>
+<li>
+<p>Paint on the rendered plane. First, select the <code>Labels</code> layer in the layer list. Then click the brush icon to "Activate the paint brush" in the layer controls. Finally paint on the rendered plane by clicking with the left mouse button on the plane and dragging the mouse. You can hold the space-bar to toggle <code>pan</code> mode to allow you to change the viewing angle. You can select the <code>plane</code> image layer and reposition the rendering plane, then re-select the <code>Labels</code> layer to resume painting.</p>
+<p><img alt="paint mode" src="https://github.com/napari-threedee/napari-threedee/assets/1120672/66d4393c-03f4-481b-bde4-d78887c1c8cb"></p>
+<p><div class="video-container"><video style="position:relative;width:100%;height:22.172vw" loop controls autoplay alt="type:video"><source src="https://github.com/napari-threedee/napari-threedee/assets/1120672/6750b262-6c79-425f-8af5-d7459ba28a16" type="video/mp4"></source></video></div></p>
 </li>
 </ol></div>
 
@@ -1914,7 +1896,7 @@
     <script id="__config" type="application/json">{"base": "../..", "features": ["search.highlight", "search.suggest", "content.tabs.link", "content.code.copy", "navigation.indexes"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.081f42fc.min.js"></script>
+      <script src="../../assets/javascripts/bundle.ad660dcc.min.js"></script>
       
     
   </body>

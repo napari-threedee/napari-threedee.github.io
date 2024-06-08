@@ -12,21 +12,21 @@
         <meta name="author" content="Alister Burt and Kevin Yamauchi">
       
       
-        <link rel="canonical" href="https://github.com/napari-threedee/napari-threedee/generated/gallery/plugin/spline_annotator_plugin/">
+        <link rel="canonical" href="https://github.com/napari-threedee/napari-threedee/generated/gallery/plugin/label_annotator_plugin/">
       
       
-        <link rel="prev" href="../camera_spline_plugin/">
+        <link rel="prev" href="../mesh_headlight_plugin/">
       
       
-        <link rel="next" href="../sphere_annotator_plugin/">
+        <link rel="next" href="../ambient_occlusion_plugin/">
       
       
       <link rel="icon" href="../../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.25">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.26">
     
     
       
-        <title>Spline annotator (plugin) - napari-threedee</title>
+        <title>Drawing labels on a plane (plugin) - napari-threedee</title>
       
     
     
@@ -92,7 +92,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#spline-annotator-plugin" class="md-skip">
+        <a href="#drawing-labels-on-a-plane-plugin" class="md-skip">
           Skip to content
         </a>
       
@@ -128,7 +128,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Spline annotator (plugin)
+              Drawing labels on a plane (plugin)
             
           </span>
         </div>
@@ -193,7 +193,7 @@
       
     </form>
     <div class="md-search__output">
-      <div class="md-search__scrollwrap" data-md-scrollfix>
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
         <div class="md-search-result" data-md-component="search-result">
           <div class="md-search-result__meta">
             Initializing search
@@ -608,11 +608,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../how_to/spline_annotator/" class="md-nav__link">
+      <a href="../../../../how_to/path_annotator/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    annotate splines in 3D
+    annotate paths in 3D
   </span>
   
 
@@ -650,7 +650,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../how_to/plane_labeler/" class="md-nav__link">
+      <a href="../../../../how_to/label_annotator/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1262,8 +1262,6 @@
       
         
       
-        
-      
     
     
     
@@ -1338,10 +1336,19 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../plane_labeler_plugin/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -1350,6 +1357,7 @@
   
 
       </a>
+      
     </li>
   
 
@@ -1367,6 +1375,27 @@
   
   <span class="md-ellipsis">
     Ambient occlusion (plugin)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sphere_annotator_plugin/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sphere annotator (plugin)
   </span>
   
 
@@ -1464,45 +1493,14 @@
                 
   
   
-    
-  
-  
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
-        
-  
-  <span class="md-ellipsis">
-    Spline annotator (plugin)
-  </span>
-  
-
-      </a>
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
   
   
     <li class="md-nav__item">
-      <a href="../sphere_annotator_plugin/" class="md-nav__link">
+      <a href="../path_annotator_plugin/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Sphere annotator (plugin)
+    Path point annotator (plugin)
   </span>
   
 
@@ -1524,27 +1522,6 @@
   
   <span class="md-ellipsis">
     Plane point annotator (plugin)
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../path_annotator_plugin/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Path point annotator (plugin)
   </span>
   
 
@@ -1723,67 +1700,52 @@
 <p>Click <a href="#download_links">here</a>
 to download the full example code</p>
 </div>
-<h1 id="spline-annotator-plugin">Spline annotator (plugin)</h1>
-<p>An example controlling the spline annotator,
-using napari-threedee as a napari plugin.</p>
-<!-- GENERATED FROM PYTHON SOURCE LINES 8-57 -->
+<h1 id="drawing-labels-on-a-plane-plugin">Drawing labels on a plane (plugin)</h1>
+<p>An example drawing labels on a rendering plane using
+the label annotator plugin.</p>
+<!-- GENERATED FROM PYTHON SOURCE LINES 8-42 -->
 
-<p><img alt="spline annotator plugin" class="mkd-glr-single-img" src="../images/mkd_glr_spline_annotator_plugin_001.png" srcset="../images/mkd_glr_spline_annotator_plugin_001.png"></p>
+<p><img alt="label annotator plugin" class="mkd-glr-single-img" src="../images/mkd_glr_label_annotator_plugin_001.png" srcset="../images/mkd_glr_label_annotator_plugin_001.png"></p>
 <div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">napari</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">from</span> <span class="nn">skimage</span> <span class="kn">import</span> <span class="n">data</span>
 
-<span class="c1"># create napari viewer</span>
+
 <span class="n">viewer</span> <span class="o">=</span> <span class="n">napari</span><span class="o">.</span><span class="n">Viewer</span><span class="p">(</span><span class="n">ndisplay</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
 
-<span class="c1"># generate image data</span>
-<span class="n">blobs</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">binary_blobs</span><span class="p">(</span><span class="n">length</span><span class="o">=</span><span class="mi">64</span><span class="p">,</span> <span class="n">volume_fraction</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span> <span class="n">n_dim</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">float</span><span class="p">)</span>
+<span class="c1"># add a volume</span>
+<span class="n">blobs</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">binary_blobs</span><span class="p">(</span>
+    <span class="n">length</span><span class="o">=</span><span class="mi">64</span><span class="p">,</span> <span class="n">volume_fraction</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span> <span class="n">n_dim</span><span class="o">=</span><span class="mi">3</span>
+<span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">float32</span><span class="p">)</span>
 
-<span class="c1"># add two image layers to viewer</span>
-<span class="n">viewer</span><span class="o">.</span><span class="n">add_image</span><span class="p">(</span>
+<span class="c1"># add the image layer in plane depiction mode</span>
+<span class="n">plane_layer</span> <span class="o">=</span> <span class="n">viewer</span><span class="o">.</span><span class="n">add_image</span><span class="p">(</span>
     <span class="n">blobs</span><span class="p">,</span>
-    <span class="n">name</span><span class="o">=</span><span class="s1">'orange plane'</span><span class="p">,</span>
-    <span class="n">rendering</span><span class="o">=</span><span class="s1">'average'</span><span class="p">,</span>
-    <span class="n">colormap</span><span class="o">=</span><span class="s1">'bop orange'</span><span class="p">,</span>
-    <span class="n">blending</span><span class="o">=</span><span class="s1">'translucent'</span><span class="p">,</span>
-    <span class="n">opacity</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span>
+    <span class="n">rendering</span><span class="o">=</span><span class="s1">'mip'</span><span class="p">,</span>
+    <span class="n">colormap</span><span class="o">=</span><span class="s2">"cyan"</span><span class="p">,</span>
+    <span class="n">name</span><span class="o">=</span><span class="s1">'plane'</span><span class="p">,</span>
     <span class="n">depiction</span><span class="o">=</span><span class="s1">'plane'</span><span class="p">,</span>
-    <span class="n">plane</span><span class="o">=</span><span class="p">{</span>
-    <span class="s1">'position'</span><span class="p">:</span> <span class="p">(</span><span class="mi">32</span><span class="p">,</span> <span class="mi">32</span><span class="p">,</span> <span class="mi">32</span><span class="p">),</span>
-    <span class="s1">'normal'</span><span class="p">:</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span>
-    <span class="s1">'thickness'</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span>
-<span class="p">})</span>
-
-<span class="n">viewer</span><span class="o">.</span><span class="n">add_image</span><span class="p">(</span>
-    <span class="n">blobs</span><span class="p">,</span>
-    <span class="n">name</span><span class="o">=</span><span class="s1">'blue plane'</span><span class="p">,</span>
-    <span class="n">rendering</span><span class="o">=</span><span class="s1">'average'</span><span class="p">,</span>
-    <span class="n">colormap</span><span class="o">=</span><span class="s1">'bop blue'</span><span class="p">,</span>
-    <span class="n">blending</span><span class="o">=</span><span class="s1">'additive'</span><span class="p">,</span>
     <span class="n">opacity</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span>
-    <span class="n">depiction</span><span class="o">=</span><span class="s1">'plane'</span><span class="p">,</span>
-    <span class="n">plane</span><span class="o">=</span><span class="p">{</span>
-    <span class="s1">'position'</span><span class="p">:</span> <span class="p">(</span><span class="mi">32</span><span class="p">,</span> <span class="mi">32</span><span class="p">,</span> <span class="mi">32</span><span class="p">),</span>
-    <span class="s1">'normal'</span><span class="p">:</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span>
-    <span class="s1">'thickness'</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span>
-<span class="p">})</span>
-
-<span class="c1"># add plugin dock widget to viewer</span>
-<span class="n">viewer</span><span class="o">.</span><span class="n">window</span><span class="o">.</span><span class="n">add_plugin_dock_widget</span><span class="p">(</span>
-    <span class="n">plugin_name</span><span class="o">=</span><span class="s2">"napari-threedee"</span><span class="p">,</span> <span class="n">widget_name</span><span class="o">=</span><span class="s2">"path annotator"</span>
+    <span class="n">plane</span><span class="o">=</span><span class="p">{</span><span class="s1">'position'</span><span class="p">:</span> <span class="p">(</span><span class="mi">32</span><span class="p">,</span> <span class="mi">32</span><span class="p">,</span> <span class="mi">32</span><span class="p">),</span> <span class="s1">'normal'</span><span class="p">:</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="s1">'thickness'</span><span class="p">:</span> <span class="mi">10</span><span class="p">}</span>
 <span class="p">)</span>
 
-<span class="c1"># run napari</span>
-<span class="n">viewer</span><span class="o">.</span><span class="n">layers</span><span class="o">.</span><span class="n">selection</span> <span class="o">=</span> <span class="p">[</span><span class="n">viewer</span><span class="o">.</span><span class="n">layers</span><span class="p">[</span><span class="mi">0</span><span class="p">]]</span>
-<span class="n">viewer</span><span class="o">.</span><span class="n">axes</span><span class="o">.</span><span class="n">visible</span> <span class="o">=</span> <span class="kc">True</span>
-<span class="n">viewer</span><span class="o">.</span><span class="n">camera</span><span class="o">.</span><span class="n">angles</span> <span class="o">=</span> <span class="p">(</span><span class="o">-</span><span class="mi">15</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="o">-</span><span class="mi">30</span><span class="p">)</span>
-<span class="n">viewer</span><span class="o">.</span><span class="n">camera</span><span class="o">.</span><span class="n">zoom</span> <span class="o">*=</span> <span class="mf">0.5</span>
+<span class="c1"># add a labels layer</span>
+<span class="n">labels_layer</span> <span class="o">=</span> <span class="n">viewer</span><span class="o">.</span><span class="n">add_labels</span><span class="p">(</span>
+    <span class="n">np</span><span class="o">.</span><span class="n">zeros_like</span><span class="p">(</span><span class="n">blobs</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span>
+<span class="p">)</span>
+<span class="n">labels_layer</span><span class="o">.</span><span class="n">n_edit_dimensions</span> <span class="o">=</span> <span class="mi">3</span>
+
+<span class="n">viewer</span><span class="o">.</span><span class="n">window</span><span class="o">.</span><span class="n">add_plugin_dock_widget</span><span class="p">(</span>
+    <span class="s2">"napari-threedee"</span><span class="p">,</span> <span class="n">widget_name</span><span class="o">=</span><span class="s2">"label annotator"</span>
+<span class="p">)</span>
+
 <span class="n">napari</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
 </code></pre></div>
-<p><strong>Total running time of the script:</strong> ( 0 minutes  1.587 seconds)</p>
+<p><strong>Total running time of the script:</strong> ( 0 minutes  4.017 seconds)</p>
 <div id="download_links"></div>
 
-<p><a class="md-button center" href="../spline_annotator_plugin.py"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 512 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M288 32c0-17.7-14.3-32-32-32s-32 14.3-32 32v242.7l-73.4-73.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l128 128c12.5 12.5 32.8 12.5 45.3 0l128-128c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L288 274.7V32zM64 352c-35.3 0-64 28.7-64 64v32c0 35.3 28.7 64 64 64h384c35.3 0 64-28.7 64-64v-32c0-35.3-28.7-64-64-64H346.5l-45.3 45.3c-25 25-65.5 25-90.5 0L165.5 352H64zm368 56a24 24 0 1 1 0 48 24 24 0 1 1 0-48z"></path></svg></span> Download Python source code: spline_annotator_plugin.py</a></p>
-<p><a class="md-button center" href="../spline_annotator_plugin.ipynb"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 512 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M288 32c0-17.7-14.3-32-32-32s-32 14.3-32 32v242.7l-73.4-73.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l128 128c12.5 12.5 32.8 12.5 45.3 0l128-128c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L288 274.7V32zM64 352c-35.3 0-64 28.7-64 64v32c0 35.3 28.7 64 64 64h384c35.3 0 64-28.7 64-64v-32c0-35.3-28.7-64-64-64H346.5l-45.3 45.3c-25 25-65.5 25-90.5 0L165.5 352H64zm368 56a24 24 0 1 1 0 48 24 24 0 1 1 0-48z"></path></svg></span> Download Jupyter notebook: spline_annotator_plugin.ipynb</a></p>
+<p><a class="md-button center" href="../label_annotator_plugin.py"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 512 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M288 32c0-17.7-14.3-32-32-32s-32 14.3-32 32v242.7l-73.4-73.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l128 128c12.5 12.5 32.8 12.5 45.3 0l128-128c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L288 274.7V32zM64 352c-35.3 0-64 28.7-64 64v32c0 35.3 28.7 64 64 64h384c35.3 0 64-28.7 64-64v-32c0-35.3-28.7-64-64-64H346.5l-45.3 45.3c-25 25-65.5 25-90.5 0L165.5 352H64zm368 56a24 24 0 1 1 0 48 24 24 0 1 1 0-48z"></path></svg></span> Download Python source code: label_annotator_plugin.py</a></p>
+<p><a class="md-button center" href="../label_annotator_plugin.ipynb"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 512 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M288 32c0-17.7-14.3-32-32-32s-32 14.3-32 32v242.7l-73.4-73.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l128 128c12.5 12.5 32.8 12.5 45.3 0l128-128c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L288 274.7V32zM64 352c-35.3 0-64 28.7-64 64v32c0 35.3 28.7 64 64 64h384c35.3 0 64-28.7 64-64v-32c0-35.3-28.7-64-64-64H346.5l-45.3 45.3c-25 25-65.5 25-90.5 0L165.5 352H64zm368 56a24 24 0 1 1 0 48 24 24 0 1 1 0-48z"></path></svg></span> Download Jupyter notebook: label_annotator_plugin.ipynb</a></p>
 <p><a class="mkd-glr-signature" href="https://mkdocs-gallery.github.io">Gallery generated by mkdocs-gallery</a></p></div>
 
 
@@ -1882,7 +1844,7 @@ using napari-threedee as a napari plugin.</p>
     <script id="__config" type="application/json">{"base": "../../../..", "features": ["search.highlight", "search.suggest", "content.tabs.link", "content.code.copy", "navigation.indexes"], "search": "../../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../../../assets/javascripts/bundle.081f42fc.min.js"></script>
+      <script src="../../../../assets/javascripts/bundle.ad660dcc.min.js"></script>
       
     
   </body>

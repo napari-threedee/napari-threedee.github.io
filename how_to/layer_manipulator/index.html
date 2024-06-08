@@ -22,7 +22,7 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.25">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.26">
     
     
       
@@ -193,7 +193,7 @@
       
     </form>
     <div class="md-search__output">
-      <div class="md-search__scrollwrap" data-md-scrollfix>
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
         <div class="md-search-result" data-md-component="search-result">
           <div class="md-search-result__meta">
             Initializing search
@@ -668,11 +668,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../spline_annotator/" class="md-nav__link">
+      <a href="../path_annotator/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    annotate splines in 3D
+    annotate paths in 3D
   </span>
   
 
@@ -710,7 +710,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../plane_labeler/" class="md-nav__link">
+      <a href="../label_annotator/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1318,8 +1318,6 @@
       
         
       
-        
-      
     
     
     
@@ -1397,7 +1395,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../generated/gallery/plugin/plane_labeler_plugin/" class="md-nav__link">
+      <a href="../../generated/gallery/plugin/label_annotator_plugin/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1423,6 +1421,27 @@
   
   <span class="md-ellipsis">
     Ambient occlusion (plugin)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../generated/gallery/plugin/sphere_annotator_plugin/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sphere annotator (plugin)
   </span>
   
 
@@ -1523,32 +1542,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../generated/gallery/plugin/spline_annotator_plugin/" class="md-nav__link">
+      <a href="../../generated/gallery/plugin/path_annotator_plugin/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Spline annotator (plugin)
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../generated/gallery/plugin/sphere_annotator_plugin/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Sphere annotator (plugin)
+    Path point annotator (plugin)
   </span>
   
 
@@ -1570,27 +1568,6 @@
   
   <span class="md-ellipsis">
     Plane point annotator (plugin)
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../generated/gallery/plugin/path_annotator_plugin/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Path point annotator (plugin)
   </span>
   
 
@@ -1797,18 +1774,25 @@
 <h2 id="instructions">Instructions</h2>
 <ol>
 <li>
-<p>Open the <a href="https://napari-threedee.github.io/generated/gallery/plugin/layer_manipulator_plugin/">layer_manipulator.py</a> example from the docs. The viewer is initalized in 3D rendering mode. You can 
-   click and drag in the canvas to rotate the view. Note that the two layers are the same image, but not aligned.</p>
+<p>To run this example, first download the script from the <a href="https://napari-threedee.github.io/generated/gallery/plugin/layer_manipulator_plugin/">Examples Gallery page</a>; the link is at the bottom of the web page. Save the file to a memorable location. Or, if you've cloned this repository, the script can be found at <code>napari-threedee/docs/examples/plugin/layer_manipulator_plugin.py</code>. </p>
+</li>
+<li>
+<p>Ensure you have activated a virtual environment with napari-threedee installed. Change directories to the script location and then execute the script using:
+    </p><div class="highlight"><pre><span></span><code>python<span class="w"> </span>layer_manipulator_plugin.py
+</code></pre></div>
+</li>
+<li>
+<p>The viewer is initalized in 3D rendering mode. You can click and drag in the canvas to rotate the view. Note that the two layers are the same image, but not aligned.</p>
 <p><img alt="layers loaded" src="https://user-images.githubusercontent.com/1120672/207427782-c2b04738-17ed-4963-b6b9-cde6a899ae7f.png"></p>
 </li>
 <li>
-<p>Select the "image_1" layer in the layer manipulator plugin. We will move layer "image_1" (the green one) to be aligned with layer "image_0".</p>
+<p>Select the "image_1" layer in the layer manipulator widget. We will move layer "image_1" (the green one) to be aligned with layer "image_0".</p>
 <p><img alt="select layer" src="https://user-images.githubusercontent.com/1120672/207428382-3683481f-4acc-4f6a-a108-c497893cf82e.png"></p>
 </li>
 <li>
-<p>Activate the layer manipulator plugin.</p>
+<p>Activate the layer manipulator plugin by clicking the "activate" button.</p>
 <p><img alt="activate the plugin" src="https://user-images.githubusercontent.com/1120672/207428741-3d07f55f-0cc9-4b1b-92eb-6d67d7beac94.png"></p>
-<p>When the plugin is activated, you will see the manipulator at (0, 0, 0) on image_1.</p>
+<p>When the plugin is activated, you will see the manipulator at (0, 0, 0) on image_1 (the green image). Note that depending on your versions of <code>napari-threedee</code> and <code>napari</code> you may see subtle visual differences between your viewer and the screenshots/videos here.</p>
 <p><img alt="plugin activated" src="https://user-images.githubusercontent.com/1120672/207428982-2637f2f4-7f2d-48ff-8c96-374cb6b8d7db.png"></p>
 </li>
 <li>
@@ -1913,7 +1897,7 @@
     <script id="__config" type="application/json">{"base": "../..", "features": ["search.highlight", "search.suggest", "content.tabs.link", "content.code.copy", "navigation.indexes"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.081f42fc.min.js"></script>
+      <script src="../../assets/javascripts/bundle.ad660dcc.min.js"></script>
       
     
   </body>

@@ -18,11 +18,11 @@
         <link rel="prev" href="../point_annotator/">
       
       
-        <link rel="next" href="../spline_annotator/">
+        <link rel="next" href="../path_annotator/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.25">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.26">
     
     
       
@@ -193,7 +193,7 @@
       
     </form>
     <div class="md-search__output">
-      <div class="md-search__scrollwrap" data-md-scrollfix>
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
         <div class="md-search-result" data-md-component="search-result">
           <div class="md-search-result__meta">
             Initializing search
@@ -668,11 +668,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../spline_annotator/" class="md-nav__link">
+      <a href="../path_annotator/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    annotate splines in 3D
+    annotate paths in 3D
   </span>
   
 
@@ -710,7 +710,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../plane_labeler/" class="md-nav__link">
+      <a href="../label_annotator/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1318,8 +1318,6 @@
       
         
       
-        
-      
     
     
     
@@ -1397,7 +1395,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../generated/gallery/plugin/plane_labeler_plugin/" class="md-nav__link">
+      <a href="../../generated/gallery/plugin/label_annotator_plugin/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1423,6 +1421,27 @@
   
   <span class="md-ellipsis">
     Ambient occlusion (plugin)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../generated/gallery/plugin/sphere_annotator_plugin/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sphere annotator (plugin)
   </span>
   
 
@@ -1523,32 +1542,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../generated/gallery/plugin/spline_annotator_plugin/" class="md-nav__link">
+      <a href="../../generated/gallery/plugin/path_annotator_plugin/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Spline annotator (plugin)
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../generated/gallery/plugin/sphere_annotator_plugin/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Sphere annotator (plugin)
+    Path point annotator (plugin)
   </span>
   
 
@@ -1570,27 +1568,6 @@
   
   <span class="md-ellipsis">
     Plane point annotator (plugin)
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../generated/gallery/plugin/path_annotator_plugin/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Path point annotator (plugin)
   </span>
   
 
@@ -1797,28 +1774,36 @@
 <h2 id="instructions">Instructions</h2>
 <ol>
 <li>
-<p>Open the <code>sphere_annotator.py</code> example from the examples folder. The viewer is initialized in 3D rendering mode in plane rendering mode. We are viewing a 3D volume with one plane being actively rendered.</p>
+<p>To run this example, first download the script from the <a href="https://napari-threedee.github.io/generated/gallery/plugin/sphere_annotator_plugin/">Examples Gallery page</a>; the link is at the bottom of the web page. Save the file to a memorable location. Or, if you've cloned this repository, the script can be found at <code>napari-threedee/docs/examples/plugin/sphere_annotator_plugin.py</code>. </p>
+</li>
+<li>
+<p>Ensure you have activated a virtual environment with napari-threedee installed. Change directories to the script location and then execute the script using:
+    </p><div class="highlight"><pre><span></span><code>python<span class="w"> </span>sphere_annotator_plugin.py
+</code></pre></div>
+</li>
+<li>
+<p>The viewer is initialized in 3D rendering mode with an image layer <code>plane</code> in plane rendering mode. We are viewing a 3D volume with one plane being actively rendered. Additionally, the viewer will also have a "sphere annotator" widget and <code>n3d spheres</code> Points layer and a <code>sphere meshes</code> Surface layer. Note that depending on your versions of <code>napari-threedee</code> and <code>napari</code> you may see subtle visual differences between your viewer and the screenshots/videos here and the layers may have slightly different names.</p>
 <p><img alt="example opened" src="https://user-images.githubusercontent.com/1120672/225966223-fb426704-efb3-4ead-a7a5-8d0731f890ff.png"></p>
 </li>
 <li>
-<p>Activate the plugin. Select the <code>plane</code> layer for the "image layer" and click the "activate" button. This will add points to the <code>Points</code> layer based on the intersection of the click ray with the currently rendered <code>orange</code> layer.</p>
+<p>Activate the plugin. Select the <code>plane</code> layer for the "image layer" and click the "activate" button.</p>
 <p><img alt="select layer" src="https://user-images.githubusercontent.com/1120672/225966635-337d550d-6880-424a-8b3b-d0f1de07b42f.png"></p>
 </li>
 <li>
-<p>You can translate the rendered orange play along its normal vector by holding the shift key while clicking  with the left mouse button and dragging the plane.</p>
+<p>You can translate the rendered orange plane along its normal vector by holding the shift key while clicking with the left mouse button and dragging the plane.  Alternately, you can re-position the render plane using <a href="https://napari-threedee.github.io/how_to/render_plane_manipulator/">the render plane manipulator</a>.</p>
 <p><div class="video-container"><video style="position:relative;width:100%;height:22.172vw" loop controls autoplay alt="type:video"><source src="https://user-images.githubusercontent.com/1120672/225967164-978493a3-ee48-4768-8359-029b6b18bb3f.mov" type="video/mp4"></source></video></div></p>
 </li>
 <li>
-<p>You can add a sphere on the rendered play by holding alt and clicking on the plane with the left mouse button. If you alt+click again, it will reposition the sphere.</p>
+<p>You can add a sphere on the rendered play by holding alt and clicking on the plane with the left mouse button. Note you must ensure that the <code>plane</code> layer is selected. A blue point marking the centroid will be placed on the <code>n3d spheres</code> Points layer and a mesh for the sphere will be created on the <code>sphere meshes</code> Surface layer. If you alt+click again, it will reposition the center of the sphere.</p>
 </li>
 </ol>
 <p><div class="video-container"><video style="position:relative;width:100%;height:22.172vw" loop controls autoplay alt="type:video"><source src="https://user-images.githubusercontent.com/1120672/225969195-c892ed99-0d97-45bf-b701-4ec07df90050.mov" type="video/mp4"></source></video></div></p>
 <ol>
-<li>You can adjust the radius of the sphere by presing the <code>r</code> key and the sphere will snap to the position where your mouse pointer intersects the rendered plane.</li>
+<li>You can adjust the radius of the sphere by pressing the <code>r</code> key: the radius of the sphere mesh will snap to the position where your mouse pointer intersects the rendered plane.</li>
 </ol>
 <p><div class="video-container"><video style="position:relative;width:100%;height:22.172vw" loop controls autoplay alt="type:video"><source src="https://user-images.githubusercontent.com/1120672/225968729-ba5c2d6b-d2a3-4012-9c71-dc8ef9abb4a3.mov" type="video/mp4"></source></video></div></p>
 <ol>
-<li>You add a new point by pressing the <code>n</code> key and repeating steps 5 and 6.</li>
+<li>You add a new sphere by pressing the <code>n</code> key and repeating steps 6 and 7. Note that the point marking the centroid will have a new color, but the initial sphere mesh will have the same radius as previously.</li>
 </ol>
 <p><div class="video-container"><video style="position:relative;width:100%;height:22.172vw" loop controls autoplay alt="type:video"><source src="https://user-images.githubusercontent.com/1120672/225969966-c6ba56d0-4f27-4ad2-977d-b07e26b302f5.mov" type="video/mp4"></source></video></div></p></div>
 
@@ -1918,7 +1903,7 @@
     <script id="__config" type="application/json">{"base": "../..", "features": ["search.highlight", "search.suggest", "content.tabs.link", "content.code.copy", "navigation.indexes"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.081f42fc.min.js"></script>
+      <script src="../../assets/javascripts/bundle.ad660dcc.min.js"></script>
       
     
   </body>

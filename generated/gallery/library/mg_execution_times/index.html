@@ -18,7 +18,7 @@
       
       
       <link rel="icon" href="../../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.25">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.26">
     
     
       
@@ -189,7 +189,7 @@
       
     </form>
     <div class="md-search__output">
-      <div class="md-search__scrollwrap" data-md-scrollfix>
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
         <div class="md-search-result" data-md-component="search-result">
           <div class="md-search-result__meta">
             Initializing search
@@ -604,11 +604,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../how_to/spline_annotator/" class="md-nav__link">
+      <a href="../../../../how_to/path_annotator/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    annotate splines in 3D
+    annotate paths in 3D
   </span>
   
 
@@ -646,7 +646,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../how_to/plane_labeler/" class="md-nav__link">
+      <a href="../../../../how_to/label_annotator/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1254,8 +1254,6 @@
       
         
       
-        
-      
     
     
     
@@ -1333,7 +1331,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../plugin/plane_labeler_plugin/" class="md-nav__link">
+      <a href="../../plugin/label_annotator_plugin/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1359,6 +1357,27 @@
   
   <span class="md-ellipsis">
     Ambient occlusion (plugin)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../plugin/sphere_annotator_plugin/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sphere annotator (plugin)
   </span>
   
 
@@ -1459,32 +1478,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../plugin/spline_annotator_plugin/" class="md-nav__link">
+      <a href="../../plugin/path_annotator_plugin/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Spline annotator (plugin)
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../plugin/sphere_annotator_plugin/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Sphere annotator (plugin)
+    Path point annotator (plugin)
   </span>
   
 
@@ -1506,27 +1504,6 @@
   
   <span class="md-ellipsis">
     Plane point annotator (plugin)
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../plugin/path_annotator_plugin/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Path point annotator (plugin)
   </span>
   
 
@@ -1701,23 +1678,23 @@
 
 
 <div><h1 id="computation-times">Computation times</h1>
-<p><strong>00:15.734</strong> total execution time for <strong>generated_gallery_library</strong> files:</p>
+<p><strong>00:15.737</strong> total execution time for <strong>generated_gallery_library</strong> files:</p>
 <p>+---------------------------------------------------------------------------------------------------------------------------------------+-----------+--------+
-| <a href="../layer_manipulator_library/">layer_manipulator_library</a> (docs/examples/library/layer_manipulator_library.py)                      | 00:03.906 | 0.0 MB |
+| <a href="../layer_manipulator_library/">layer_manipulator_library</a> (docs/examples/library/layer_manipulator_library.py)                      | 00:04.056 | 0.0 MB |
 +---------------------------------------------------------------------------------------------------------------------------------------+-----------+--------+
-| <a href="../path_annotator_library/">path_annotator_library</a> (docs/examples/library/path_annotator_library.py)                               | 00:03.393 | 0.0 MB |
+| <a href="../path_annotator_library/">path_annotator_library</a> (docs/examples/library/path_annotator_library.py)                               | 00:03.360 | 0.0 MB |
 +---------------------------------------------------------------------------------------------------------------------------------------+-----------+--------+
-| <a href="../surface_annotator_library/">surface_annotator_library</a> (docs/examples/library/surface_annotator_library.py)                      | 00:02.580 | 0.0 MB |
+| <a href="../surface_annotator_library/">surface_annotator_library</a> (docs/examples/library/surface_annotator_library.py)                      | 00:02.504 | 0.0 MB |
 +---------------------------------------------------------------------------------------------------------------------------------------+-----------+--------+
-| <a href="../point_annotator_library/">point_annotator_library</a> (docs/examples/library/point_annotator_library.py)                            | 00:01.488 | 0.0 MB |
+| <a href="../point_annotator_library/">point_annotator_library</a> (docs/examples/library/point_annotator_library.py)                            | 00:01.485 | 0.0 MB |
 +---------------------------------------------------------------------------------------------------------------------------------------+-----------+--------+
-| <a href="../mesh_headlight_library/">mesh_headlight_library</a> (docs/examples/library/mesh_headlight_library.py)                               | 00:01.246 | 0.0 MB |
+| <a href="../render_plane_manipulator_library/">render_plane_manipulator_library</a> (docs/examples/library/render_plane_manipulator_library.py) | 00:01.245 | 0.0 MB |
 +---------------------------------------------------------------------------------------------------------------------------------------+-----------+--------+
-| <a href="../render_plane_manipulator_library/">render_plane_manipulator_library</a> (docs/examples/library/render_plane_manipulator_library.py) | 00:01.221 | 0.0 MB |
+| <a href="../mesh_headlight_library/">mesh_headlight_library</a> (docs/examples/library/mesh_headlight_library.py)                               | 00:01.204 | 0.0 MB |
 +---------------------------------------------------------------------------------------------------------------------------------------+-----------+--------+
-| <a href="../sphere_annotator_library/">sphere_annotator_library</a> (docs/examples/library/sphere_annotator_library.py)                         | 00:00.976 | 0.0 MB |
+| <a href="../sphere_annotator_library/">sphere_annotator_library</a> (docs/examples/library/sphere_annotator_library.py)                         | 00:00.991 | 0.0 MB |
 +---------------------------------------------------------------------------------------------------------------------------------------+-----------+--------+
-| <a href="../camera_spline_library/">camera_spline_library</a> (docs/examples/library/camera_spline_library.py)                                  | 00:00.924 | 0.0 MB |
+| <a href="../camera_spline_library/">camera_spline_library</a> (docs/examples/library/camera_spline_library.py)                                  | 00:00.893 | 0.0 MB |
 +---------------------------------------------------------------------------------------------------------------------------------------+-----------+--------+</p></div>
 
 
@@ -1816,7 +1793,7 @@
     <script id="__config" type="application/json">{"base": "../../../..", "features": ["search.highlight", "search.suggest", "content.tabs.link", "content.code.copy", "navigation.indexes"], "search": "../../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../../../assets/javascripts/bundle.081f42fc.min.js"></script>
+      <script src="../../../../assets/javascripts/bundle.ad660dcc.min.js"></script>
       
     
   </body>
